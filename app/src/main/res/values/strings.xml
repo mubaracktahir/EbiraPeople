@@ -2,4 +2,14 @@
     <string name="app_name">Ebira People</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- onBoarding screen texts -->
+
+    <string name="welcome_text">The Ebiras like all other nationalities in the world have their own 
+        heroes and heroines. The Ebira speaking people are scattered in four locations in Nigeria.  </string>
+    <string name="ebira">Ebira</string>
+    <string name="people">People</string>
+    <string name="get_started">Get Started</string>
+
 </resources>
