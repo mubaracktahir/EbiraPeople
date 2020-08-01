@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+
+        <attr name="viewText" format="string" />
+        <attr name="underlineThickness" format="dimension" />
+
+    </declare-styleable>
+</resources>

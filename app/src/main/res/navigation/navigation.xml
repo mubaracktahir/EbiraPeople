@@ -9,5 +9,23 @@
         android:id="@+id/splashScreenFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.SplashScreen.SplashScreenFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" />
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_welcomeScreen"
+            app:destination="@id/welcomeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.mubaracktahir.ebirapeople.UI.OnboardingScreen.WelcomeScreen.WelcomeScreen"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_onBoarderParent"
+            app:destination="@id/onBoarderParent" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarderParent"
+        android:name="com.mubaracktahir.ebirapeople.UI.OnboardingScreen.OnBoarderParent"
+        android:label="fragment_on_boarder_parent"
+        tools:layout="@layout/fragment_on_boarder_parent" />
 </navigation>
