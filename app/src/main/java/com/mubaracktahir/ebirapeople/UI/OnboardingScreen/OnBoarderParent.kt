@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.mubaracktahir.ebirapeople.R
 import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.FirstScreen
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_on_boarder_parent.view.*
 
 class OnBoarderParent : Fragment() {
     var firstTime = true
-    lateinit var binding:FragmentOnBoarderParentBinding
+    lateinit var binding: FragmentOnBoarderParentBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,13 +39,17 @@ class OnBoarderParent : Fragment() {
 
 
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_on_boarder_parent, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_on_boarder_parent, container, false)
         binding.linearLayout.setOnClickListener {
 
             if (binding.viewPager2.currentItem == 0)
                 binding.viewPager2.setCurrentItem(1)
-            else
+            else if (binding.viewPager2.currentItem == 1)
                 binding.viewPager2.setCurrentItem(2)
+            else
+                Navigation.findNavController(binding.root)
+                    .navigate(R.id.action_onBoarderParent_to_homeFragment)
         }
         addFirstDot(binding)
 

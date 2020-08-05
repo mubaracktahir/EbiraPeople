@@ -5,16 +5,22 @@
 
 
     <!-- onBoarding screen texts -->
-
-    <string name="welcome_text">The Ebiras like all other nationalities in the world have their own 
+    <string name="welcome_text">The Ebiras like all other nationalities in the world have their own
         heroes and heroines. The Ebira speaking people are scattered in four locations in Nigeria.  </string>
     <string name="underline_ebira"><u>Ebira</u></string>
     <string name="underline_people"><u>People</u></string>
     <string name="get_started">Get Started</string>
     <string name="learn_more">Learn More</string>
     <string name="next">Next</string>
-    <string name="five_clans">The Ebiras like all other nationalities in the worldhave their own heroesand heroines. The Ebira speaking people are scattered in four locations in Nigeria. There are five clan groups in Ebiraland. These are represented by Adavi, Eganyi, Eika, Ihima and Okengwe/Okene districts. Each of the clan groups has its own several clans.</string>
-    <string name="second_onboarding_text">The focus of this paper is on the Ebira-Tao. The other Ebiras are Ebira Koto, Ebira Etunoh in the present Edo State and Ebira Toto in the Toto Local Government Area of the present Nasarawa State.This paper talks of some of the Heroes and Heroines of the Ebira nation because names on such lists are inexhaustible.</string>
-    <string name="last_onboarding_text">There are five clan groups in Ebiraland. These are represented by Adavi, Eganyi, Eika, Ihima and Okengwe/Okene districts. Each of the clan groups has its own several clans.</string>
+    <string name="second_onboarding_text">Become a pro in our norms and culture.</string>
+    <string name="first_message">Get to know our Royal History.</string>
+    <string name="last_onboarding_text">Have a view of amazing places Like the palace of the Ohinoyi of Ebira Land</string>
+    <string name="good_mornig"> Nyene</string>
+    <string name="good_afternoon"> Nyari odu</string>
+    <string name="good_evening"> Nyari oruva </string>
+    <string name="sleeping">You\'re supposed to be sleeping </string>
+    <string name="beautiful_places">Beautiful Places</string>
+    <string name="hi">Hi</string>
+    <string name="search_area_text">Search</string>
 
 </resources>
