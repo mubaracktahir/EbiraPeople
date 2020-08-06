@@ -19,7 +19,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_25dp_margin"
+                android:layout_margin="@dimen/_15dp_margin"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/raleway_medium"
                 android:text="@string/hi"

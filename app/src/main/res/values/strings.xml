@@ -20,7 +20,11 @@
     <string name="good_evening"> Nyari oruva </string>
     <string name="sleeping">You\'re supposed to be sleeping </string>
     <string name="beautiful_places">Beautiful Places</string>
-    <string name="hi">Hi</string>
+    <string name="hi">Tao</string>
     <string name="search_area_text">Search</string>
+    <string name="history">History</string>
+    <string name="culture">Culture</string>
+    <string name="people">People</string>
+    <string name="entertainment">Entertainment</string>
 
 </resources>

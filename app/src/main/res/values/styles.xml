@@ -7,4 +7,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+    <style name="textParent" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="miniTextView" parent="textParent">
+        <item name="android:textSize">
+
+        </item>
+    </style>
 </resources>
