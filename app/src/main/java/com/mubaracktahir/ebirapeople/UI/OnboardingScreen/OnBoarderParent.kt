@@ -74,7 +74,9 @@ class OnBoarderParent : Fragment() {
         binding.viewPager2.adapter = viewPagerAdapter
         return binding.root
     }
+    fun setUpWidget(){
 
+    }
     // creates dot indicator for the first enterance of the onBoardingScreen
     fun addFirstDot(view: FragmentOnBoarderParentBinding) {
 
