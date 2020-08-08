@@ -37,7 +37,7 @@ class PeopleFragment : Fragment() {
             Log.v("", "")
 
         }
-    })
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
