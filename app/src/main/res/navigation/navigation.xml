@@ -13,6 +13,8 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_welcomeScreen"
             app:destination="@id/welcomeScreen"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popEnterAnim="@android:anim/fade_in"
             app:popUpTo="@id/splashScreenFragment"
             app:popUpToInclusive="true" />
         <action
@@ -48,10 +50,27 @@
         <action
             android:id="@+id/action_homeFragment_to_historyFragment"
             app:destination="@id/historyFragment"
-            app:popUpTo="@id/homeFragment" />
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.HistoryFragment.HistoryFragment"
         android:label="HistoryFragment" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.PeopleFragment.PeopleFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
 </navigation>

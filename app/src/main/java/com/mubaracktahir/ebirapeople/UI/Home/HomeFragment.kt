@@ -1,6 +1,5 @@
 package com.mubaracktahir.ebirapeople.UI.Home
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,10 @@ import androidx.navigation.fragment.findNavController
 import com.mubaracktahir.ebirapeople.R
 import com.mubaracktahir.ebirapeople.databinding.FragmentHomeBinding
 
+/**
+ * This is the Fragment that is Shown after the [SplashScreenFragment]
+ *
+ */
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
@@ -19,13 +22,16 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-
-        setupWidget()
-
+        setUpWidget()
         return binding.root
     }
 
-    fun setupWidget(){
+    /**
+     * Setting up the UI component of [HomeFragment]
+     * listening to clicks and scrolls from Views are in this Function
+     *
+     */
+    fun setUpWidget(){
         binding.historyCard.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_historyFragment)
         }
@@ -33,6 +39,7 @@ class HomeFragment : Fragment() {
 
         }
         binding.peopleCard.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_peopleFragment)
 
         }
         binding.entertainmentCard.setOnClickListener{

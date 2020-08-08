@@ -66,7 +66,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/history_color_gradient"
-            android:paddingBottom="@dimen/_5dp_margin"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <LinearLayout
@@ -85,12 +84,12 @@
                     android:fontFamily="@font/muli_light"
                     android:text="@string/history_of_ebira_people"
                     android:textColor="@android:color/white"
-                    android:textSize="11sp"
+                    android:textSize="16sp"
+                    android:paddingBottom="@dimen/_15dp_margin"
                     android:textStyle="bold" />
 
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

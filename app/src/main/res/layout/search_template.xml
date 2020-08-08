@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/searchView"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/lato_bold"
+                android:hint="@string/search_area_text"
+                android:textSize="16sp"
+                android:drawableRight="@drawable/search"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</merge>
