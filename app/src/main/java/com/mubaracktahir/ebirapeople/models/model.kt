@@ -2,6 +2,7 @@ package com.mubaracktahir.ebirapeople.models
 
 import android.os.Parcel
 import android.os.Parcelable
+import com.mubaracktahir.ebirapeople.R
 import kotlinx.android.parcel.Parcelize
 
 
@@ -14,4 +15,4 @@ import kotlinx.android.parcel.Parcelize
 * the model for the item to be displayed
 */
 @Parcelize
-data class People(val name: String, val desc: String, val image: Int = 0) : Parcelable
+data class People(val name: String, val desc: String, val image: Int = R.drawable.placeholder) : Parcelable
