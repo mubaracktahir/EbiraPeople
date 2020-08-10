@@ -35,7 +35,7 @@ class PeopleListFragment : BaseListFragment<FragmentListBinding>(R.layout.fragme
         mList.add(People(resources.getString(R.string.p15), resources.getString(R.string.p15_d),R.drawable.p15))
         mList.add(People(resources.getString(R.string.p16), resources.getString(R.string.p16_d)))
         mList.add(People(resources.getString(R.string.p17), resources.getString(R.string.p17_d)))
-        mList.add(People(resources.getString(R.string.p18), resources.getString(R.string.p18_d))
+        mList.add(People(resources.getString(R.string.p18), resources.getString(R.string.p18_d)))
         mList.add(People(resources.getString(R.string.p19), resources.getString(R.string.p19_d)))
         mList.add(People(resources.getString(R.string.p20), resources.getString(R.string.p20_d)))
         mList.add(People(resources.getString(R.string.p21), resources.getString(R.string.p21_d)))
