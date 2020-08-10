@@ -8,22 +8,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.mubaracktahir.ebirapeople.R
+import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.databinding.FragmentHomeBinding
 
 /**
  * This is the Fragment that is Shown after the [SplashScreenFragment]
  *
  */
-class HomeFragment : Fragment() {
-    lateinit var binding: FragmentHomeBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+
+    override fun init() {
         setUpWidget()
-        return binding.root
     }
 
     /**

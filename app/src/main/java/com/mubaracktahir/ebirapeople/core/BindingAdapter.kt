@@ -34,3 +34,5 @@ fun ImageView.setImage(item: People) {
         setImageResource(item.image)
     }
 }
+
+

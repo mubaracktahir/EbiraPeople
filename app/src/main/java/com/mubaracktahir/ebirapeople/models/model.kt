@@ -14,4 +14,4 @@ import kotlinx.android.parcel.Parcelize
 * the model for the item to be displayed
 */
 @Parcelize
-data class People(val name: String, val desc: String, val image: Int) : Parcelable
+data class People(val name: String, val desc: String, val image: Int = 0) : Parcelable

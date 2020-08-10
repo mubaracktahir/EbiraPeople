@@ -5,6 +5,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import androidx.annotation.LayoutRes
+import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mubaracktahir.ebirapeople.UI.PeopleFragment.RecyclerAdapter
 import com.mubaracktahir.ebirapeople.models.People
@@ -17,14 +18,12 @@ import kotlinx.android.synthetic.main.search_template.view.*
  * Mubby inc
  * mubarack.tahirr@gmail.com
  */
-abstract class BaseListFragment(@LayoutRes override val layoutRes: Int) : BaseFragment(layoutRes) {
-
+abstract class BaseListFragment<DB:ViewDataBinding>(@LayoutRes override val layoutRes: Int) : BaseFragment<DB>(layoutRes) {
 
     val mList = ArrayList<People>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         addList()
-
     }
 
     private val adapter by lazy {
@@ -36,12 +35,16 @@ abstract class BaseListFragment(@LayoutRes override val layoutRes: Int) : BaseFr
     abstract fun handleItemClick(_person: People)
     abstract fun addList()
     override fun init() {
-        views.searchView.addTextChangedListener(textWatcher)
-        views.recycler.setHasFixedSize(true)
-        views.recycler.layoutManager = LinearLayoutManager(context)
+
+        binding.root.searchView.addTextChangedListener(textWatcher)
+        binding.root.recycler.let {
+            it.setHasFixedSize(true)
+            it.layoutManager = LinearLayoutManager(context)
+            it.adapter = adapter
+
+        }
         adapter.people.clear()
         adapter.people.addAll(mList)
-        views.recycler.adapter = adapter
     }
 
     private val textWatcher = object : TextWatcher {

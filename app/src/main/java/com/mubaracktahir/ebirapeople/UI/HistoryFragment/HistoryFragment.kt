@@ -3,12 +3,10 @@ package com.mubaracktahir.ebirapeople.UI.HistoryFragment
 import android.view.View
 import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.R
+import com.mubaracktahir.ebirapeople.databinding.FragmentHistoryBinding
 
 
-class HistoryFragment : BaseFragment(R.layout.fragment_history) {
-    override fun init() {
-    }
-
+class HistoryFragment : BaseFragment<FragmentHistoryBinding>(R.layout.fragment_history) {
     override fun onResume() {
         super.onResume()
         activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE or

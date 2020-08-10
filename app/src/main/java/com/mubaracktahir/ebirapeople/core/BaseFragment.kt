@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 
 
@@ -13,10 +15,10 @@ import androidx.fragment.app.Fragment
  * Mubby inc
  * mubarack.tahirr@gmail.com
  */
-abstract class BaseFragment(@LayoutRes open val layoutRes: Int) : Fragment() {
-    open lateinit var views: View
+abstract class BaseFragment<DB: ViewDataBinding >(@LayoutRes open val layoutRes: Int) : Fragment() {
+    open lateinit var binding: DB
     private fun init(inflater: LayoutInflater, container: ViewGroup) {
-        views = inflater.inflate(layoutRes, container, false)
+        binding = DataBindingUtil.inflate(inflater,layoutRes, container, false)
     }
     open fun init(){}
     override fun onCreateView(
@@ -27,6 +29,6 @@ abstract class BaseFragment(@LayoutRes open val layoutRes: Int) : Fragment() {
         init(inflater, container!!)
         init()
         super.onCreateView(inflater, container, savedInstanceState)
-        return views
+        return binding.root
     }
 }
