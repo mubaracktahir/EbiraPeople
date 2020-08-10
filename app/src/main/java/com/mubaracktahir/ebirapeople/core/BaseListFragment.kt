@@ -53,11 +53,9 @@ abstract class BaseListFragment<DB:ViewDataBinding>(@LayoutRes override val layo
         }
 
         override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            Log.v("", "")
         }
 
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            Log.v("", "")
         }
     }
 

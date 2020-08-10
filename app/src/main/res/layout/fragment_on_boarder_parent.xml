@@ -59,7 +59,7 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="140dp"
+                android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:background="@drawable/onboarding_screen_btn_bgrd"
                 android:clickable="true"

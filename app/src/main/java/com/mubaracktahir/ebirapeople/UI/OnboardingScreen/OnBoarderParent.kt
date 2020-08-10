@@ -1,34 +1,23 @@
 package com.mubaracktahir.ebirapeople.UI.OnboardingScreen
 
 import android.graphics.Color
-import android.os.Bundle
 import android.text.Html
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.mubaracktahir.ebirapeople.R
-import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.FirstScreen
-import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.SecondScreen
-import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.ThirdScreen
+import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.*
+import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.databinding.FragmentOnBoarderParentBinding
 import kotlinx.android.synthetic.main.fragment_on_boarder_parent.view.*
 
 
-class OnBoarderParent : Fragment() {
+class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fragment_on_boarder_parent) {
     var firstTime = true
-    lateinit var binding: FragmentOnBoarderParentBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
+    override fun init() {
         //List of Fragments in the onBoarding Screen
-        var fragments = arrayListOf<Fragment>(
+        val fragments = arrayListOf(
             FirstScreen(), SecondScreen(), ThirdScreen()
         )
 
@@ -37,19 +26,16 @@ class OnBoarderParent : Fragment() {
             lifecycle
         )
 
-
-        // Inflate the layout for this fragment
-        binding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_on_boarder_parent, container, false)
         binding.linearLayout.setOnClickListener {
+            when(binding.viewPager2.currentItem){
+                0 -> binding.viewPager2.setCurrentItem(1)
+                1 -> binding.viewPager2.setCurrentItem(2)
+                else -> {
 
-            if (binding.viewPager2.currentItem == 0)
-                binding.viewPager2.setCurrentItem(1)
-            else if (binding.viewPager2.currentItem == 1)
-                binding.viewPager2.setCurrentItem(2)
-            else
-                Navigation.findNavController(binding.root)
-                    .navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
+                    findNavController()
+                        .navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
+                }
+            }
         }
         addFirstDot(binding)
 
@@ -72,11 +58,9 @@ class OnBoarderParent : Fragment() {
         )
 
         binding.viewPager2.adapter = viewPagerAdapter
-        return binding.root
-    }
-    fun setUpWidget(){
 
     }
+
     // creates dot indicator for the first enterance of the onBoardingScreen
     fun addFirstDot(view: FragmentOnBoarderParentBinding) {
 
