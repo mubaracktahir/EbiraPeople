@@ -1,22 +1,12 @@
 package com.mubaracktahir.ebirapeople.UI.HistoryFragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
+import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.R
 
 
-class HistoryFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        return inflater.inflate(R.layout.fragment_history, container, false)
+class HistoryFragment : BaseFragment(R.layout.fragment_history) {
+    override fun init() {
     }
 
     override fun onResume() {

@@ -31,18 +31,18 @@ class HomeFragment : Fragment() {
      * listening to clicks and scrolls from Views are in this Function
      *
      */
-    fun setUpWidget(){
-        binding.historyCard.setOnClickListener{
-            findNavController().navigate(R.id.action_homeFragment_to_historyFragment)
+    fun setUpWidget() {
+        binding.historyCard.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
         }
-        binding.cultureCard.setOnClickListener{
+        binding.cultureCard.setOnClickListener {
 
         }
-        binding.peopleCard.setOnClickListener{
-            findNavController().navigate(R.id.action_homeFragment_to_peopleFragment)
+        binding.peopleCard.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPeopleFragment())
 
         }
-        binding.entertainmentCard.setOnClickListener{
+        binding.entertainmentCard.setOnClickListener {
 
         }
 

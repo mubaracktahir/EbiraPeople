@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:paddingStart="@dimen/_15dp_margin"
     android:paddingEnd="@dimen/_15dp_margin"
-    tools:context=".UI.PeopleFragment.PeopleFragment">
+    tools:context=".UI.PeopleFragment.PeopleListFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

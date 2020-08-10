@@ -1,12 +1,11 @@
 package com.mubaracktahir.ebirapeople.UI.PeopleFragment
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.mubaracktahir.ebirapeople.R
+import com.mubaracktahir.ebirapeople.UI.PeopleFragment.RecyclerAdapter.MyViewHolder.Companion.from
+import com.mubaracktahir.ebirapeople.databinding.ItemModelBinding
+import com.mubaracktahir.ebirapeople.models.People
 
 
 /**
@@ -14,38 +13,75 @@ import com.mubaracktahir.ebirapeople.R
  * Mubby inc
  * mubarack.tahirr@gmail.com
  */
-data class People(val name: String, val desc: String, val image: Int)
-class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
-
+class RecyclerAdapter(val clickListener: (person:People) -> Unit) :
+    RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
+    /**
+     * the list of items that this adapter uses to display item on the [RecyclerView]
+     */
     var people = ArrayList<People>()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
+        set(value) {
+            field = value
 
+            /**
+             *
+             * this tells the the [RecyclerView] that the list has been updated
+             * this will make every item on the list to be redrawn.
+             *
+             */
+            notifyDataSetChanged()
+        }
+
+    /**
+     * part of the recycler Adapter called when [RecyclerView] needs a new [ViewHolder]
+     *
+     * the [ViewHolder] holds a view for the [RecyclerView]
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_model, parent, false)
-
-        return MyViewHolder(view);
+        return from(parent)
     }
 
+    /**
+     * This tells the [RecyclerView] the size of the [people]
+     */
     override fun getItemCount() = people.size
 
+    /**
+     * this is called when [RecyclerView] needs to display item on the screen
+     *
+     * the [ViewHolder] passed are recycled i.e replaced, so we ensure that we resset any property that
+     * may have been previously set
+     *
+     */
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val person = people[position]
-        holder.setUpView(person)
+        holder.bind(person,clickListener)
     }
 
-    class MyViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        fun setUpView(person:People){
-            var imageView = view.findViewById<ImageView>(R.id.image)
-            var name = view.findViewById<TextView>(R.id.name)
-            var description = view.findViewById<TextView>(R.id.description)
+    /**
+     *
+     */
+    class MyViewHolder(val binding: ItemModelBinding) : RecyclerView.ViewHolder(binding.root) {
 
-            imageView.setImageResource(R.drawable.king)
-            name.text = person.name
-            description.text = person.desc
 
+        /**
+         *
+         */
+        fun bind(person: People, clickListener:(person:People)->Unit) {
+            binding.item = person
+            binding.executePendingBindings()
+            binding.root.setOnClickListener {
+                clickListener(person)
+            }
+        }
+
+        companion object {
+            fun from(parent: ViewGroup): MyViewHolder {
+                val layoutInflater = LayoutInflater.from(parent.context)
+                val binding = ItemModelBinding.inflate(layoutInflater, parent, false)
+                return MyViewHolder(binding);
+            }
         }
     }
+
+
 }

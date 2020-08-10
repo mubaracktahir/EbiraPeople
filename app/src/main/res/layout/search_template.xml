@@ -6,7 +6,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="8dp">
 
         <RelativeLayout
@@ -17,6 +16,7 @@
                 android:id="@+id/searchView"
                 android:singleLine="true"
                 android:maxLines="1"
+                android:focusableInTouchMode="true"
                 android:layout_width="match_parent"
                 android:background="@null"
                 android:layout_height="wrap_content"

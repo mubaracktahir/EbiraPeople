@@ -70,7 +70,20 @@
         android:label="HistoryFragment" />
     <fragment
         android:id="@+id/peopleFragment"
-        android:name="com.mubaracktahir.ebirapeople.UI.PeopleFragment.PeopleFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.PeopleFragment.PeopleListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_peopleFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.PeopleFragment.Person.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" >
+        <argument
+            android:name="person"
+            app:argType="com.mubaracktahir.ebirapeople.models.People" />
+    </fragment>
 </navigation>

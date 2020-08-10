@@ -49,7 +49,7 @@ class OnBoarderParent : Fragment() {
                 binding.viewPager2.setCurrentItem(2)
             else
                 Navigation.findNavController(binding.root)
-                    .navigate(R.id.action_onBoarderParent_to_homeFragment)
+                    .navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
         }
         addFirstDot(binding)
 
