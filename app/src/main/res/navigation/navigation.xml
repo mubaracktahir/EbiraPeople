@@ -46,6 +46,7 @@
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
+        tools:layout="@layout/fragment_home"
         android:id="@+id/homeFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.Home.HomeFragment"
         android:label="HomeFragment" >
@@ -65,8 +66,12 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@android:anim/fade_in"
             app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_placesDisplayerFragment"
+            app:destination="@id/placesDisplayerFragment" />
     </fragment>
     <fragment
+        tools:layout="@layout/fragment_history"
         android:id="@+id/historyFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.HistoryFragment.HistoryFragment"
         android:label="HistoryFragment" />
@@ -88,4 +93,9 @@
             android:name="person"
             app:argType="com.mubaracktahir.ebirapeople.models.People" />
     </fragment>
+    <fragment
+        android:id="@+id/placesDisplayerFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.PlacesDisplayerFragment"
+        android:label="fragment_places_displayer"
+        tools:layout="@layout/fragment_places_displayer" />
 </navigation>
