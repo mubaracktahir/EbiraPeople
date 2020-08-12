@@ -32,8 +32,7 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
                 1 -> binding.viewPager2.setCurrentItem(2)
                 else -> {
 
-                    findNavController()
-                        .navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
+                    navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
                 }
             }
         }
@@ -85,7 +84,7 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
         var i = 0
         while (i < 3) {
 
-            textViews[i] = TextView(this?.context)
+            textViews[i] = TextView(this.context)
             textViews[i]?.setText(Html.fromHtml("&#8226;"))
             textViews[i]?.textSize = 50f
             textViews[i]?.setTextColor(Color.parseColor("#F74E2E"))

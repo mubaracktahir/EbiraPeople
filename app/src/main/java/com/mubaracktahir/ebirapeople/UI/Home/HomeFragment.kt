@@ -28,17 +28,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
      */
     fun setUpWidget() {
         binding.historyCard.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
+            navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
         }
         binding.cultureCard.setOnClickListener {
 
         }
         binding.peopleCard.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPeopleFragment())
+            navigate(HomeFragmentDirections.actionHomeFragmentToPeopleFragment())
 
         }
         binding.entertainmentCard.setOnClickListener {
-
+            navigate(HomeFragmentDirections.actionHomeFragmentToEntertainmentFragment())
         }
 
     }

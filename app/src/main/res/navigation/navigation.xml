@@ -69,6 +69,9 @@
         <action
             android:id="@+id/action_homeFragment_to_placesDisplayerFragment"
             app:destination="@id/placesDisplayerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_entertainmentFragment"
+            app:destination="@id/entertainmentFragment" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_history"
@@ -98,4 +101,22 @@
         android:name="com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.PlacesDisplayerFragment"
         android:label="fragment_places_displayer"
         tools:layout="@layout/fragment_places_displayer" />
+    <fragment
+        tools:layout="@layout/fragment_list"
+        android:id="@+id/entertainmentFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.EntertainmentFragment"
+        android:label="EntertainmentFragment" >
+        <action
+            android:id="@+id/action_entertainmentFragment_to_blogersFragment"
+            app:destination="@id/blogersFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_list"
+        android:id="@+id/blogersFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.Bloggers.BlogersFragment"
+        android:label="BlogersFragment" >
+        <action
+            android:id="@+id/action_blogersFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
 </navigation>

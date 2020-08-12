@@ -13,7 +13,7 @@ import com.mubaracktahir.ebirapeople.models.People
  * Mubby inc
  * mubarack.tahirr@gmail.com
  */
-class RecyclerAdapter(val clickListener: (person:People) -> Unit) :
+class RecyclerAdapter(val clickListener: (person: People, position: Int) -> Unit) :
     RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
     /**
      * the list of items that this adapter uses to display item on the [RecyclerView]
@@ -54,7 +54,7 @@ class RecyclerAdapter(val clickListener: (person:People) -> Unit) :
      */
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val person = people[position]
-        holder.bind(person,clickListener)
+        holder.bind(person, position,clickListener)
     }
 
     /**
@@ -66,11 +66,11 @@ class RecyclerAdapter(val clickListener: (person:People) -> Unit) :
         /**
          *
          */
-        fun bind(person: People, clickListener:(person:People)->Unit) {
+        fun bind(person: People, position: Int,clickListener: (person: People,position: Int) -> Unit) {
             binding.item = person
             binding.executePendingBindings()
             binding.root.setOnClickListener {
-                clickListener(person)
+                clickListener(person,position)
             }
         }
 

@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.fragment_welcome_screen.view.*
 class WelcomeScreen : BaseFragment<FragmentWelcomeScreenBinding>(R.layout.fragment_welcome_screen){
     override fun init() {
         binding.linearLayout.setOnClickListener {
-            findNavController().navigate(WelcomeScreenDirections.actionWelcomeScreenToOnBoarderParent())
+            navigate(WelcomeScreenDirections.actionWelcomeScreenToOnBoarderParent())
         }
     }
 

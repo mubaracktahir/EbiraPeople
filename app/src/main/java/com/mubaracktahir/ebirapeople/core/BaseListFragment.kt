@@ -3,10 +3,10 @@ package com.mubaracktahir.ebirapeople.core
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
-import androidx.annotation.LayoutRes
+import androidx.annotation.StringRes
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mubaracktahir.ebirapeople.R
 import com.mubaracktahir.ebirapeople.UI.PeopleFragment.RecyclerAdapter
 import com.mubaracktahir.ebirapeople.models.People
 import kotlinx.android.synthetic.main.fragment_list.view.*
@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.search_template.view.*
  * Mubby inc
  * mubarack.tahirr@gmail.com
  */
-abstract class BaseListFragment<DB:ViewDataBinding>(@LayoutRes override val layoutRes: Int) : BaseFragment<DB>(layoutRes) {
+abstract class BaseListFragment<DB : ViewDataBinding>() : BaseFragment<DB>(R.layout.fragment_list) {
 
     val mList = ArrayList<People>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,12 +27,12 @@ abstract class BaseListFragment<DB:ViewDataBinding>(@LayoutRes override val layo
     }
 
     private val adapter by lazy {
-        RecyclerAdapter { _person ->
-            handleItemClick(_person)
+        RecyclerAdapter { _person, pos ->
+            handleItemClick(_person, pos)
         }
     }
 
-    abstract fun handleItemClick(_person: People)
+    abstract fun handleItemClick(_person: People, pos: Int)
     abstract fun addList()
     override fun init() {
 
