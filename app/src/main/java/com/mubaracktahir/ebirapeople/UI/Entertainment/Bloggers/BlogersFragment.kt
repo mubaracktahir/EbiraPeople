@@ -17,11 +17,11 @@ class BlogersFragment : BaseListFragment<FragmentListBinding>() {
     }
 
     override fun addList() {
-        mList.add(People(passString(R.string.b1),passString(R.string.b1_d)))
-        mList.add(People(passString(R.string.b2),passString(R.string.b2_d)))
-        mList.add(People(passString(R.string.b3),passString(R.string.b3_d)))
-        mList.add(People(passString(R.string.b4),passString(R.string.b4_d)))
-        mList.add(People(passString(R.string.b5),passString(R.string.b5_d)))
+        mList.add(People(passString(R.string.b1),passString(R.string.b1_d),R.drawable.b1))
+        mList.add(People(passString(R.string.b2),passString(R.string.b2_d),R.drawable.b2))
+        mList.add(People(passString(R.string.b3),passString(R.string.b3_d),R.drawable.b3))
+        mList.add(People(passString(R.string.b4),passString(R.string.b4_d),R.drawable.b4))
+        mList.add(People(passString(R.string.b5),passString(R.string.b5_d),R.drawable.b5))
         mList.add(People(passString(R.string.b6),passString(R.string.b6_d),R.drawable.b6))
 
     }
