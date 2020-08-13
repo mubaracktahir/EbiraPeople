@@ -16,15 +16,17 @@ class EntertainmentFragment : BaseListFragment<FragmentListBinding>() {
         mList.add(
             People(
                 "Bloggers",
-                "",
+                " Know more about the likes of: ${passString(R.string.b1)}," +
+                        "${passString(R.string.b2)},${passString(R.string.b3)} ",
                 R.drawable.demo
             )
         )
         mList.add(
             People(
                 "Photographers",
-                "",
-                R.drawable.demo
+                "Know more about the likes of: ${passString(R.string.ph1)}," +
+                        "${passString(R.string.ph2)},${passString(R.string.ph3)} ",
+                R.drawable.photograhy
             )
         )
     }
@@ -34,5 +36,10 @@ class EntertainmentFragment : BaseListFragment<FragmentListBinding>() {
             navigate(
                 EntertainmentFragmentDirections.actionEntertainmentFragmentToBlogersFragment()
             )
+        if (pos == 1)
+            navigate(
+                EntertainmentFragmentDirections.actionEntertainmentFragmentToPhotographyFragment()
+            )
+
     }
 }

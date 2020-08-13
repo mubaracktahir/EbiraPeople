@@ -22,7 +22,7 @@ class BlogersFragment : BaseListFragment<FragmentListBinding>() {
         mList.add(People(passString(R.string.b3),passString(R.string.b3_d)))
         mList.add(People(passString(R.string.b4),passString(R.string.b4_d)))
         mList.add(People(passString(R.string.b5),passString(R.string.b5_d)))
-        mList.add(People(passString(R.string.b6),passString(R.string.b6_d)))
+        mList.add(People(passString(R.string.b6),passString(R.string.b6_d),R.drawable.b6))
 
     }
 }

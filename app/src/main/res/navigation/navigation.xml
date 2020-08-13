@@ -109,6 +109,9 @@
         <action
             android:id="@+id/action_entertainmentFragment_to_blogersFragment"
             app:destination="@id/blogersFragment" />
+        <action
+            android:id="@+id/action_entertainmentFragment_to_photographyFragment"
+            app:destination="@id/photographyFragment" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_list"
@@ -117,6 +120,14 @@
         android:label="BlogersFragment" >
         <action
             android:id="@+id/action_blogersFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photographyFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.Photographers.PhotographyFragment"
+        android:label="PhotographyFragment" >
+        <action
+            android:id="@+id/action_photographyFragment_to_personFragment"
             app:destination="@id/personFragment" />
     </fragment>
 </navigation>

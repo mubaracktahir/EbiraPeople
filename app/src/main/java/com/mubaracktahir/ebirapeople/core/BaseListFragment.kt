@@ -35,12 +35,11 @@ abstract class BaseListFragment<DB : ViewDataBinding>() : BaseFragment<DB>(R.lay
     abstract fun handleItemClick(_person: People, pos: Int)
     abstract fun addList()
     override fun init() {
-
         binding.root.searchView.addTextChangedListener(textWatcher)
-        binding.root.recycler.let {
-            it.setHasFixedSize(true)
-            it.layoutManager = LinearLayoutManager(context)
-            it.adapter = adapter
+        binding.root.recycler.let {_recyclerView ->
+            _recyclerView.setHasFixedSize(true)
+            _recyclerView.layoutManager = LinearLayoutManager(context)
+            _recyclerView.adapter = adapter
 
         }
         adapter.people.clear()
