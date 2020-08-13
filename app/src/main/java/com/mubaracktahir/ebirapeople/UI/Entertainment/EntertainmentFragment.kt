@@ -16,7 +16,7 @@ class EntertainmentFragment : BaseListFragment<FragmentListBinding>() {
         mList.add(
             People(
                 "Bloggers",
-                " Know more about the likes of: ${passString(R.string.b1)}," +
+                "Know more about the likes of: ${passString(R.string.b1)}," +
                         "${passString(R.string.b2)},${passString(R.string.b3)} ",
                 R.drawable.demo
             )

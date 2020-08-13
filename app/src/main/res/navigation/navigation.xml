@@ -123,6 +123,7 @@
             app:destination="@id/personFragment" />
     </fragment>
     <fragment
+        tools:layout="@layout/fragment_list"
         android:id="@+id/photographyFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.Photographers.PhotographyFragment"
         android:label="PhotographyFragment" >
