@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="person"
-            type="com.mubaracktahir.ebirapeople.models.People" />
+            name="place"
+            type="com.mubaracktahir.ebirapeople.models.Place" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -31,9 +31,9 @@
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_250sdp"
+                    android:layout_height="@dimen/_260sdp"
                     android:scaleType="centerCrop"
-                    app:image="@{person}"
+                    app:image="@{place}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -89,43 +89,61 @@
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toEndOf="@id/horizontal_line"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:name="@{person}" />
+                        app:name="@{place}" />
 
 
                     <TextView
                         android:id="@+id/description"
                         android:layout_width="0dp"
-                        tools:layout_height="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="15dp"
                         android:paddingBottom="20dp"
-                        android:text="This is the palace of Alhaji Ibrahim Onoruoiza Atta, the late Ohinoyi of Ebiraland who ruled ruled over Ebiraland between 1917 – 1954, as the first British appointed Chief who exercised influence over the entire Ebiraland.
-                    The palace is well architectural constructed with a wide open spaced compound and a podium under a big tree in which the Ohinoyi addresses his people and pass judgements.
+                        tools:text="This is the palace of Alhaji Ibrahim Onoruoiza Atta, the late Ohinoyi of Ebiraland who ruled ruled over Ebiraland between 1917 – 1954, as the first British appointed Chief who exercised influence over the entire Ebiraland.
+                    mThe palace is well architectural constructed with a wide open spaced compound and a podium under a big tree in which the Ohinoyi addresses his people and pass judgements.
                     As a young man, he learnt the art of statesmanship from his grandfather, Atta Omadivi. He also also learnt business from his industrious mother, and was widely travelled. He was a fast learner and learnt to speak different languages which are Hausa, Nupe, Igala, Edo, Tiv, Yoruba, Igbo, Pidgin english.He demonstrated great patriotism and devotion to his domain, evidenced in the many developmental projects he accomplished during his reign. As early as 1923, the first Native Authority School (NA) was founded in Okene.
                     The Atta exposed his domain to the outside world through the construction of a network of roads, effectively positioning Okene as the gateway between the North and South. Realising the essence of portable water for the health of his people, the Atta, in 1937, constructed a dam for Okene to provide pipe borne water for the township which is still serving the Okene populace. He was the first Anebira to learn the Quran and spearheaded the construction of a befitting central mosque at Okene which is still been used till date. He also welcomed and accommodated the first missionaries who freely propagated the teachings of Christianity."
                         android:textColor="@android:color/white"
                         android:textSize="15sp"
-                        app:description="@{person}"
+                        app:description="@{place}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/name" />
+                        app:layout_constraintTop_toBottomOf="@+id/name"
+                        tools:layout_height="200dp" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:fontFamily="@font/raleway_heavy"
-                    android:text="More pictures of Upugu"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/raleway_heavy"
+                        android:text="More pictures of"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/raleway_heavy"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:name="@{place}" />
+                </LinearLayout>
+
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="15dp"

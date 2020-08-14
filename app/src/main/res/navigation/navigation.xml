@@ -9,7 +9,7 @@
         android:id="@+id/splashScreenFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.SplashScreen.SplashScreenFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" >
+        tools:layout="@layout/fragment_splash_screen">
         <action
             android:id="@+id/action_splashScreenFragment_to_welcomeScreen"
             app:destination="@id/welcomeScreen"
@@ -27,7 +27,7 @@
         android:id="@+id/welcomeScreen"
         android:name="com.mubaracktahir.ebirapeople.UI.OnboardingScreen.WelcomeScreen.WelcomeScreen"
         android:label="fragment_welcome_screen"
-        tools:layout="@layout/fragment_welcome_screen" >
+        tools:layout="@layout/fragment_welcome_screen">
         <action
             android:id="@+id/action_welcomeScreen_to_onBoarderParent"
             app:destination="@id/onBoarderParent"
@@ -38,7 +38,7 @@
         android:id="@+id/onBoarderParent"
         android:name="com.mubaracktahir.ebirapeople.UI.OnboardingScreen.OnBoarderParent"
         android:label="fragment_on_boarder_parent"
-        tools:layout="@layout/fragment_on_boarder_parent" >
+        tools:layout="@layout/fragment_on_boarder_parent">
         <action
             android:id="@+id/action_onBoarderParent_to_homeFragment"
             app:destination="@id/homeFragment"
@@ -46,10 +46,10 @@
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_home"
         android:id="@+id/homeFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.Home.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_historyFragment"
             app:destination="@id/historyFragment"
@@ -72,17 +72,20 @@
         <action
             android:id="@+id/action_homeFragment_to_entertainmentFragment"
             app:destination="@id/entertainmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cultureFragment"
+            app:destination="@id/cultureFragment" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_history"
         android:id="@+id/historyFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.HistoryFragment.HistoryFragment"
-        android:label="HistoryFragment" />
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/peopleFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.PeopleFragment.PeopleListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_peopleFragment_to_personFragment"
             app:destination="@id/personFragment" />
@@ -91,7 +94,7 @@
         android:id="@+id/personFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.PeopleFragment.Person.PersonFragment"
         android:label="fragment_person"
-        tools:layout="@layout/fragment_person" >
+        tools:layout="@layout/fragment_person">
         <argument
             android:name="person"
             app:argType="com.mubaracktahir.ebirapeople.models.People" />
@@ -100,12 +103,16 @@
         android:id="@+id/placesDisplayerFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.PlacesDisplayerFragment"
         android:label="fragment_places_displayer"
-        tools:layout="@layout/fragment_places_displayer" />
+        tools:layout="@layout/fragment_places_displayer">
+        <argument
+            android:name="place"
+            app:argType="com.mubaracktahir.ebirapeople.models.Place" />
+    </fragment>
     <fragment
-        tools:layout="@layout/fragment_list"
         android:id="@+id/entertainmentFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.EntertainmentFragment"
-        android:label="EntertainmentFragment" >
+        android:label="EntertainmentFragment"
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_entertainmentFragment_to_blogersFragment"
             app:destination="@id/blogersFragment" />
@@ -114,21 +121,30 @@
             app:destination="@id/photographyFragment" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_list"
         android:id="@+id/blogersFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.Bloggers.BlogersFragment"
-        android:label="BlogersFragment" >
+        android:label="BlogersFragment"
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_blogersFragment_to_personFragment"
             app:destination="@id/personFragment" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_list"
         android:id="@+id/photographyFragment"
         android:name="com.mubaracktahir.ebirapeople.UI.Entertainment.Photographers.PhotographyFragment"
-        android:label="PhotographyFragment" >
+        android:label="PhotographyFragment"
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_photographyFragment_to_personFragment"
             app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_list"
+        android:id="@+id/cultureFragment"
+        android:name="com.mubaracktahir.ebirapeople.UI.culture.CultureFragment"
+        android:label="CultureFragment">
+        <action
+            android:id="@+id/action_cultureFragment_to_placesDisplayerFragment"
+            app:destination="@id/placesDisplayerFragment" />
     </fragment>
 </navigation>

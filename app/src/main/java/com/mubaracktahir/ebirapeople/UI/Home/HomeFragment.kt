@@ -32,6 +32,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         }
         binding.cultureCard.setOnClickListener {
 
+            navigate(HomeFragmentDirections.actionHomeFragmentToCultureFragment())
+
         }
         binding.peopleCard.setOnClickListener {
             navigate(HomeFragmentDirections.actionHomeFragmentToPeopleFragment())

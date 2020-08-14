@@ -13,7 +13,7 @@ import com.mubaracktahir.ebirapeople.models.People
  */
 class EntertainmentFragment : BaseListFragment<FragmentListBinding>() {
     override fun addList() {
-        mList.add(
+        mPeopleList.add(
             People(
                 "Bloggers",
                 "Know more about the likes of: ${passString(R.string.b1)}," +
@@ -21,7 +21,7 @@ class EntertainmentFragment : BaseListFragment<FragmentListBinding>() {
                 R.drawable.demo
             )
         )
-        mList.add(
+        mPeopleList.add(
             People(
                 "Photographers",
                 "Know more about the likes of: ${passString(R.string.ph1)}," +
