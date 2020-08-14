@@ -265,4 +265,30 @@ He love traveling, exploring, and interacting with nature. He also love reading,
 He is a photography enthusiast, love the stories, and intrigue each photo tells, and he have dedicatedly been on this path for two years now. Hopefully, we will see more of him in days to come, as he build his self to become better at what he love doing.
  </string>
 
+    <!-- Culture names and descriptions-->
+
+    <string name="c1">ECHE-ANE</string>
+    <string name="c1_d">Eche-Ane is an annual masquerade festival celebrated in
+rotation from one district to the other in Ebira Land, usually
+between April–June.
+According to history, it was only during the period of the
+festival that betrothed ladies were given away in marriage to
+their suitors. That is why the festival was named \'Eche-
+ane\' (women festival).
+Eche-Ane is basically characterised by the outing of
+masquerades (Eku) with their long canes, to entertain and
+also receive gifts from guests</string>
+
+
+    <string name="c2">Éché-Óri</string>
+    <string name="c2_d">Éché Óri\' is a new yam festival celebrated only in two districts in Ebiraland.
+These are Ihima and Eganyi. During the festival, traditional worshippers make sacrifices in the secret groove of \'Óri\' (deity) high up in the mountain to show gratitude for its protection and provision of bounteous harvest. The worshipers carry long canes with which they whip one another in turns without anyone exhibiting any sign of pain. This is a mark of strength or manhood.
+Another important attraction of the festival is the delightful \'Échóri\' music in which female singers feature prominently. Only after this festival can one eat or sell new yams in the market as it is a taboo to do so before the festival in Ihima and Eganyi.</string>
+
+    <string name="c3">EKUECHI</string>
+    <string name="c3_d">This is a night masquerade festival which marks the end of the Ebira calendar year and the beginning of a new one. Ododo is popularly acclaimed to be the initiator of this masquerade festival. The \'Akatapa\' masquerade in heralding the beginning of the festival often say \"Irayi ododo osi gu, Irayi akatapa osi gu eeeh! Osa yeeeh!\" which means \"the year of the Ododo has ended; the year of Akatapa has ended. Here is another year".
+
+The festival begins with a festival eve in which folk singers (ome ikede) perform to the delight of both men and women. The following day, the real festival in which masquerades sing and dance to entertain people from dusk to dawn takes place. It is restricted to men only so all women stay indoors throughout the duration of the festival. All dead relatives are believed to return to a earth on a visit this night, so, women prepare delicious \'Apapa\' (bean read) and he-goat meat for the visitors. The women also, at times, leave monetary gifts with the men for the visiting dead relatives. Trust men, the meals and gifts are properly and neatly delivered to the beneficiaries who only the men have the privilege of seeing and interacting with, that night.</string>
+
+
 </resources>

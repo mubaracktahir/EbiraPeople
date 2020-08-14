@@ -3,7 +3,6 @@ package com.mubaracktahir.ebirapeople.core
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.annotation.StringRes
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mubaracktahir.ebirapeople.R
@@ -20,7 +19,7 @@ import kotlinx.android.synthetic.main.search_template.view.*
  */
 abstract class BaseListFragment<DB : ViewDataBinding>() : BaseFragment<DB>(R.layout.fragment_list) {
 
-    val mList = ArrayList<People>()
+    val mPeopleList = ArrayList<People>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         addList()
@@ -43,7 +42,7 @@ abstract class BaseListFragment<DB : ViewDataBinding>() : BaseFragment<DB>(R.lay
 
         }
         adapter.people.clear()
-        adapter.people.addAll(mList)
+        adapter.people.addAll(mPeopleList)
     }
 
     private val textWatcher = object : TextWatcher {
@@ -61,7 +60,7 @@ abstract class BaseListFragment<DB : ViewDataBinding>() : BaseFragment<DB>(R.lay
 
     private fun filter(query: String) {
         val people = ArrayList<People>()
-        mList.forEach {
+        mPeopleList.forEach {
             it.name?.let { _it ->
                 if (_it.toLowerCase().trim().contains(query.toLowerCase().trim())) {
                     people.add(it)

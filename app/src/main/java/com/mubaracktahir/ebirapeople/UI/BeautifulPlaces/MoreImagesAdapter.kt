@@ -1,24 +1,20 @@
-package com.mubaracktahir.ebirapeople.UI.PeopleFragment
+package com.mubaracktahir.ebirapeople.UI.BeautifulPlaces
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.mubaracktahir.ebirapeople.UI.PeopleFragment.RecyclerAdapter.MyViewHolder.Companion.from
-import com.mubaracktahir.ebirapeople.databinding.ItemModelBinding
-import com.mubaracktahir.ebirapeople.models.People
-
-
+import com.mubaracktahir.ebirapeople.databinding.MorePicturesItemBinding
 /**
- * Created by Mubarak Tahir on 8/8/2020.
+ * Created by Mubarak Tahir on 8/14/2020.
  * Mubby inc
  * mubarack.tahirr@gmail.com
  */
-class RecyclerAdapter(val clickListener: (person: People, position: Int) -> Unit) :
-    RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
+class MoreImagesAdapter(val clickListener: (person: Int, position: Int) -> Unit) :
+    RecyclerView.Adapter<MoreImagesAdapter.MyViewHolder>() {
     /**
      * the list of items that this adapter uses to display item on the [RecyclerView]
      */
-    var people = ArrayList<People>()
+    var places = ArrayList<Int>()
         set(value) {
             field = value
 
@@ -30,19 +26,20 @@ class RecyclerAdapter(val clickListener: (person: People, position: Int) -> Unit
              */
             notifyDataSetChanged()
         }
+
     /**
      * part of the recycler Adapter called when [RecyclerView] needs a new [ViewHolder]
      *
      * the [ViewHolder] holds a view for the [RecyclerView]
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return from(parent)
+        return MyViewHolder.from(parent)
     }
 
     /**
-     * This tells the [RecyclerView] the size of the [people]
+     * This tells the [RecyclerView] the size of the [places]
      */
-    override fun getItemCount() = people.size
+    override fun getItemCount() = places.size
 
     /**
      * this is called when [RecyclerView] needs to display item on the screen
@@ -52,31 +49,34 @@ class RecyclerAdapter(val clickListener: (person: People, position: Int) -> Unit
      *
      */
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val person = people[position]
-        holder.bind(person, position,clickListener)
+        val place = places[position]
+        holder.bind(place,position , clickListener)
     }
 
     /**
      *
      */
-    class MyViewHolder(val binding: ItemModelBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyViewHolder(val binding: MorePicturesItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
 
         /**
          *
          */
-        fun bind(person: People, position: Int,clickListener: (person: People,position: Int) -> Unit) {
-            binding.item = person
-            binding.executePendingBindings()
+        fun bind(
+            place: Int,
+            position: Int,
+            clickListener: (place: Int, position: Int) -> Unit
+        ) {
+            binding.place.setImageResource(place)
             binding.root.setOnClickListener {
-                clickListener(person,position)
+                clickListener(place, position)
             }
         }
 
         companion object {
             fun from(parent: ViewGroup): MyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemModelBinding.inflate(layoutInflater, parent, false)
+                val binding = MorePicturesItemBinding.inflate(layoutInflater, parent, false)
                 return MyViewHolder(binding);
             }
         }
