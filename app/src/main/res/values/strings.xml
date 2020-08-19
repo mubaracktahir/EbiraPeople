@@ -290,5 +290,34 @@ Another important attraction of the festival is the delightful \'Échóri\' musi
 
 The festival begins with a festival eve in which folk singers (ome ikede) perform to the delight of both men and women. The following day, the real festival in which masquerades sing and dance to entertain people from dusk to dawn takes place. It is restricted to men only so all women stay indoors throughout the duration of the festival. All dead relatives are believed to return to a earth on a visit this night, so, women prepare delicious \'Apapa\' (bean read) and he-goat meat for the visitors. The women also, at times, leave monetary gifts with the men for the visiting dead relatives. Trust men, the meals and gifts are properly and neatly delivered to the beneficiaries who only the men have the privilege of seeing and interacting with, that night.</string>
 
+    <!--Beautiful places-->
+
+    <string name="be1">Attah\'s Palace</string>
+    <string name="be1_d">This is the palace of Alhaji Ibrahim Onoruoiza Atta, the late Ohinoyi of Ebiraland who ruled ruled over Ebiraland between 1917 – 1954, as the first British appointed Chief who exercised influence over the entire Ebiraland.
+The palace is well architectural constructed with a wide open spaced compound and a podium under a big tree in which the Ohinoyi addresses his people and pass judgements.
+As a young man, he learnt the art of statesmanship from his grandfather, Atta Omadivi. He also also learnt business from his industrious mother, and was widely travelled. He was a fast learner and learnt to speak different languages which are Hausa, Nupe, Igala, Edo, Tiv, Yoruba, Igbo, Pidgin english.He demonstrated great patriotism and devotion to his domain, evidenced in the many developmental projects he accomplished during his reign. As early as 1923, the first Native Authority School (NA) was founded in Okene.
+The Atta exposed his domain to the outside world through the construction of a network of roads, effectively positioning Okene as the gateway between the North and South. Realising the essence of portable water for the health of his people, the Atta, in 1937, constructed a dam for Okene to provide pipe borne water for the township which is still serving the Okene populace. He was the first Anebira to learn the Quran and spearheaded the construction of a befitting central mosque at Okene which is still been used till date. He also welcomed and accommodated the first missionaries who freely propagated the teachings of Christianity.
+</string>
+
+    <string name="be2">Upugo waterfall </string>
+    <string name="be2_d">Upugo waterfall in Okene is situated along Okene - Ajaokuta Road. It is situated like most waterfall in a rocky landscape, about 20-30 minutes trek from the Okene secondary school (O S S).
+It flows gently in the dry season but comes in full force during rainy season. It attracts local tourists across Nigeria as one of the most beautiful natural environment in Northern Nigeria. The sorrounding is dominated by shrubs with neatly placed rocks that create natural stairs for ascension from the grassland to the base of the waterfall making it a perfect choice for nature lovers.</string>
+
+    <string name="be3">THE PALACE OF OHINOYI OF EBIRALAND</string>
+    <string name="be3_d">The Ohinoyi of Ebiraland assumed office on 2nd June 1997, after the passing away of the
+former Ohinoyi, Alhaji Sanni Omolori who ruled for 40 years and 40 days as Ohinoyi of Ebiraland.
+He rules Ebiraland from his magnificent pavilion, AZAD Palace named
+after his son. The palace is rated as one of the most beautiful palaces in West Africa.
+Ohinoyi of Ebiraland Palace is Captivating, majestic, wide and strategically
+located around Inioziomi area of Okene.
+This Palace\'s minarets shoot high and view able from many high grounds in Okene and neighboring part </string>
+
+    <string name="be4">Ekuku Dam</string>
+    <string name="be4_d">Ekuku Dam in Okene, Kogi state.
+Its located in the far axis of Agassa in Okene.
+Ekuku Dam is a serene environment dominated by farmers,Further research have made it known that there is a cave also known as Ekuku cave some metres away from the dam in which is a resting place for the farmers and also a hide out for our forefathers during times of war in Ebiraland
+This place called a Ekuku as beautiful as it is still needs the Government intervention and reconstruction. Its a place that can be turned into a tourist attraction centre.</string>
+    <string name="good_night">Good Night</string>
+
 
 </resources>

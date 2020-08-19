@@ -1,8 +1,10 @@
 package com.mubaracktahir.ebirapeople.UI.OnboardingScreen
 
+import android.content.Context
 import android.graphics.Color
 import android.text.Html
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
@@ -30,9 +32,10 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
             when(binding.viewPager2.currentItem){
                 0 -> binding.viewPager2.setCurrentItem(1)
                 1 -> binding.viewPager2.setCurrentItem(2)
-                else -> {
+                2 -> {
 
                     navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
+                    onBoardingFinished()
                 }
             }
         }
@@ -99,4 +102,21 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
             textViews[position]?.setTextColor(Color.parseColor("#FFBA38"))
 
     }
+    private fun onBoardingFinished() {
+        val sharedPref = requireActivity().getPreferences(
+            Context.MODE_PRIVATE
+        ) ?: return
+        with(sharedPref.edit()){
+            putBoolean("finished",true)
+            commit()
+        }
+     /*   val editor = sharedPref.edit()
+        editor.putBoolean("finished", true)
+
+        editor.apply()
+*/
+        Toast.makeText(context,"${sharedPref.getBoolean("finished",false)}", Toast.LENGTH_LONG).show()
+
+    }
+
 }

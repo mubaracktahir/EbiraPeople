@@ -123,7 +123,8 @@
 
                 <FrameLayout
                     android:id="@+id/frameLayout"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_height="@dimen/beautiful_places_height"
                     android:layout_marginTop="@dimen/_12dp_margin"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -132,8 +133,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                     <androidx.viewpager2.widget.ViewPager2
-                        android:layout_width="match_parent"
+                        android:id="@+id/recycler"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:paddingStart="80dp"
+                        android:paddingEnd="80dp"
                         tools:listitem="@layout/beautiful_places_item"/>
                 </FrameLayout>
 

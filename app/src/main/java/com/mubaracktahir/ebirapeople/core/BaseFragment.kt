@@ -26,6 +26,11 @@ abstract class BaseFragment<DB: ViewDataBinding >(@LayoutRes open val layoutRes:
     }
     open fun init(){}
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

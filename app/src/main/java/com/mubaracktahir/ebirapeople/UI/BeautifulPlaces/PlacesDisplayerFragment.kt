@@ -19,6 +19,8 @@ class PlacesDisplayerFragment :
     val adapter by lazy {
         MoreImagesAdapter { _places, pos ->
             binding.imageView2.setImageResource(_places)
+
+            binding.appbar.setExpanded(true)
         }
     }
     override fun init() {

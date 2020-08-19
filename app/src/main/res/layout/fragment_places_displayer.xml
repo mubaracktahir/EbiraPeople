@@ -17,6 +17,7 @@
         tools:context=".UI.BeautifulPlaces.PlacesDisplayerFragment">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -31,7 +32,7 @@
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_260sdp"
+                    android:layout_height="@dimen/_280sdp"
                     android:scaleType="centerCrop"
                     app:image="@{place}"
                     app:layout_constraintEnd_toEndOf="parent"
