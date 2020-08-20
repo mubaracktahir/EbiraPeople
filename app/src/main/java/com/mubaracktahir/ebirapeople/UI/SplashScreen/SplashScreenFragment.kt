@@ -2,7 +2,6 @@ package com.mubaracktahir.ebirapeople.UI.SplashScreen
 
 import android.content.Context
 import android.os.Handler
-import android.widget.Toast
 import androidx.navigation.Navigation
 import com.mubaracktahir.ebirapeople.R
 import com.mubaracktahir.ebirapeople.core.BaseFragment
@@ -33,7 +32,10 @@ class SplashScreenFragment :
         val sharedPref = activity?.getPreferences(
             Context.MODE_PRIVATE
         )
-        return sharedPref?.getBoolean("finished", false)
+        return sharedPref?.getBoolean(
+            getString(R.string.com_mubaracktahir_ebirapeople_onboarding_finished),
+            false
+        )
 
     }
 }

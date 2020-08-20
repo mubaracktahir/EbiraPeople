@@ -55,7 +55,6 @@ fun TextView.setDescription(item: Place) {
         text = item.desc
     }
 }
-var i = 0
 @BindingAdapter("image")
 fun ImageView.setImage(item: Place) {
 
@@ -69,16 +68,4 @@ fun ImageView.setImage(item: Place) {
     }
 }
 
-@BindingAdapter("horizontalImage")
-fun ImageView.setImage2(item: Place) {
-
-    item?.images.let {
-
-        if (it.isEmpty())
-            setImageResource(R.drawable.placeholder)
-        else
-            setImageResource(R.drawable.photograhy)
-
-    }
-}
 

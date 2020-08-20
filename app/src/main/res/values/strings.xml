@@ -21,9 +21,10 @@
     <string name="good_mornig"> Nyene</string>
     <string name="good_afternoon"> Nyari odu</string>
     <string name="good_evening"> Nyari oruva </string>
+    <string name="good_night">Good Night, you are suppose to be in bed</string>
     <string name="sleeping">You\'re supposed to be sleeping </string>
     <string name="beautiful_places">Beautiful Places</string>
-    <string name="hi">Tao</string>
+    <string name="hi">Tao </string>
     <string name="search_area_text">Search</string>
     <string name="history">History</string>
     <string name="culture">Culture</string>
@@ -317,7 +318,9 @@ This Palace\'s minarets shoot high and view able from many high grounds in Okene
 Its located in the far axis of Agassa in Okene.
 Ekuku Dam is a serene environment dominated by farmers,Further research have made it known that there is a cave also known as Ekuku cave some metres away from the dam in which is a resting place for the farmers and also a hide out for our forefathers during times of war in Ebiraland
 This place called a Ekuku as beautiful as it is still needs the Government intervention and reconstruction. Its a place that can be turned into a tourist attraction centre.</string>
-    <string name="good_night">Good Night</string>
+    <string name="bloggers">Bloggers</string>
+    <string name="photographer">Photographers</string>
+    <string name="com.mubaracktahir.ebirapeople.onboarding.finished">com.mubaracktahir.ebirapeople.onboarding.finished</string>
 
 
 </resources>

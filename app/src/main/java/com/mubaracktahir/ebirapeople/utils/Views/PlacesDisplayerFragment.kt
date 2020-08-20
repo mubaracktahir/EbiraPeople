@@ -1,9 +1,10 @@
-package com.mubaracktahir.ebirapeople.UI.BeautifulPlaces
+package com.mubaracktahir.ebirapeople.utils.Views
 
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mubaracktahir.ebirapeople.R
+import com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.MoreImagesAdapter
 import com.mubaracktahir.ebirapeople.core.FullScreenFragment
 import com.mubaracktahir.ebirapeople.databinding.FragmentPlacesDisplayerBinding
 import kotlinx.android.synthetic.main.fragment_list.view.*
@@ -19,12 +20,14 @@ class PlacesDisplayerFragment :
     val adapter by lazy {
         MoreImagesAdapter { _places, pos ->
             binding.imageView2.setImageResource(_places)
-
             binding.appbar.setExpanded(true)
         }
     }
     override fun init() {
-        val args = PlacesDisplayerFragmentArgs.fromBundle(requireArguments())
+        val args =
+            PlacesDisplayerFragmentArgs.fromBundle(
+                requireArguments()
+            )
         val place = args.place
         binding.place = place
 

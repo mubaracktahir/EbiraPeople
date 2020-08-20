@@ -1,7 +1,6 @@
 package com.mubaracktahir.ebirapeople.UI.Home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.ViewPager2
@@ -19,6 +18,8 @@ import kotlin.collections.ArrayList
  */
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
+
+    private fun getEmoji(uniCode : Int) = String(Character.toChars(uniCode))
     override fun init() {
         setUpWidget()
     }
@@ -28,8 +29,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
      * listening to clicks and scrolls from Views are in this Function
      *
      */
-    fun setUpWidget() {
-        binding.textView5.text = sayGreetings()
+    private fun setUpWidget() {
+        binding.textHi.append(" ${getEmoji(0x1F44B)},")
+        binding.greetingText.text = sayGreetings()
         binding.historyCard.setOnClickListener {
             navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
         }
@@ -42,58 +44,66 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.entertainmentCard.setOnClickListener {
             navigate(HomeFragmentDirections.actionHomeFragmentToEntertainmentFragment())
         }
-
-
         // seting up the beautifulPlaces viewPager
         setUpBeautifulPlaces()
     }
 
+    private val mPlaces by lazy {
+        ArrayList<Place>()
+    }
 
-    fun setUpBeautifulPlaces() {
-        val mPlaces = ArrayList<Place>()
-        mPlaces.add(
-            Place(
-                getString(R.string.be3),
-                getString(R.string.be3_d),
-                R.drawable.ohi1,
-                R.drawable.ohi2,
-                R.drawable.ohi3,
-                R.drawable.ohi4
-            )
-        )
-        mPlaces.add(
-            Place(
-                getString(R.string.be1),
-                getString(R.string.be1_d),
-                R.drawable.at1,
-                R.drawable.at2,
-                R.drawable.at3
-            )
-        )
-        mPlaces.add(
-            Place(
-                getString(R.string.be4),
-                getString(R.string.be4_d),
-                R.drawable.ak1,
-                R.drawable.ak2,
-                R.drawable.ak3,
-                R.drawable.ak4
-            )
-        )
-        mPlaces.add(
-            Place(
-                getString(R.string.be2),
-                getString(R.string.be2_d),
-                R.drawable.up1,
-                R.drawable.up3,
-                R.drawable.up5
-            )
-        )
-
-
-        val adapter = ViewPagerAdapter2(binding.recycler) { place, position ->
+    private val adapter by lazy {
+        ViewPagerAdapter2(binding.recycler) { place, position ->
             navigate(HomeFragmentDirections.actionHomeFragmentToPlacesDisplayerFragment(place))
         }
+    }
+
+    private fun setUpBeautifulPlaces() {
+        mPlaces.clear()
+        mPlaces.apply {
+            add(
+                Place(
+                    getString(R.string.be3),
+                    getString(R.string.be3_d),
+                    R.drawable.ohi1,
+                    R.drawable.ohi2,
+                    R.drawable.ohi3,
+                    R.drawable.ohi4
+                )
+            )
+            add(
+                Place(
+                    getString(R.string.be1),
+                    getString(R.string.be1_d),
+                    R.drawable.at1,
+                    R.drawable.at2,
+                    R.drawable.at3
+                )
+            )
+            add(
+                Place(
+                    getString(R.string.be4),
+                    getString(R.string.be4_d),
+                    R.drawable.ak1,
+                    R.drawable.ak2,
+                    R.drawable.ak3,
+                    R.drawable.ak4
+                )
+            )
+          add(
+                Place(
+                    getString(R.string.be2),
+                    getString(R.string.be2_d),
+                    R.drawable.up1,
+                    R.drawable.up3,
+                    R.drawable.up5
+                )
+            )
+
+        }
+
+
+        //passing all the beautiful places to the ViewPager
         adapter.places = mPlaces
         binding.recycler.adapter = adapter
         binding.recycler.clipToPadding = false
@@ -104,7 +114,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.recycler.setPageTransformer(compositePageTransformer)
         android.os.Handler().postDelayed(
             {
-               binding.recycler.adapter = adapter
+                binding.recycler.adapter = adapter
                 binding.recycler.setCurrentItem(2)
             }, 500
         )
@@ -112,23 +122,38 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     class SelectedPageZoomer : ViewPager2.PageTransformer {
         override fun transformPage(page: View, position: Float) {
+
+
             val scaleFactor = 1 - Math.abs(position)
+
+            // increase the scaleY of the focused or current view
             page.scaleY = 0.85f + scaleFactor * 0.15f
         }
     }
 
+    /*
+    *
+    * displaces greeting depending on the time of the day
+    *
+    * */
     private fun sayGreetings(): String {
+
+        //get an instance of the android calendar class
         val cal = Calendar.getInstance();
+
+        // gets the current hour of the day
         val currentTimeOfTheDay = cal.get(Calendar.HOUR_OF_DAY)
         return when (currentTimeOfTheDay) {
-            in 0..11 -> passString(R.string.good_mornig)
-            in 12..15 -> passString(R.string.good_afternoon)
-            in 16..20 -> passString(R.string.good_evening)
-            else -> passString(R.string.good_night)
+            in 0..11 -> "${passString(R.string.good_mornig) } ${getEmoji(0x26C8)}"
+            in 12..15 ->  "${passString(R.string.good_afternoon) } ${getEmoji(0x1F31E)}"
+            in 16..20 -> "${passString(R.string.good_evening) } ${getEmoji(0x1F31B)}"
+            else -> "${passString(R.string.good_night) } ${getEmoji(0x1F644)}"
         }
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //shuffle beautiful places
         setUpBeautifulPlaces()
     }
 }

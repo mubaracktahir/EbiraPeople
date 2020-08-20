@@ -101,7 +101,7 @@
     </fragment>
     <fragment
         android:id="@+id/placesDisplayerFragment"
-        android:name="com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.PlacesDisplayerFragment"
+        android:name="com.mubaracktahir.ebirapeople.utils.Views.PlacesDisplayerFragment"
         android:label="fragment_places_displayer"
         tools:layout="@layout/fragment_places_displayer">
         <argument

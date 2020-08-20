@@ -115,7 +115,7 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
 
         editor.apply()
 */
-        Toast.makeText(context,"${sharedPref.getBoolean("finished",false)}", Toast.LENGTH_LONG).show()
+        Toast.makeText(context,"${sharedPref.getBoolean(passString(R.string.com_mubaracktahir_ebirapeople_onboarding_finished),false)}", Toast.LENGTH_LONG).show()
 
     }
 
