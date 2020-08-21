@@ -1,21 +1,20 @@
 package com.mubaracktahir.ebirapeople.UI.OnboardingScreen
 
-import android.content.Context
 import android.graphics.Color
 import android.text.Html
 import android.widget.TextView
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.mubaracktahir.ebirapeople.R
-import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.*
+import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.FirstScreen
+import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.SecondScreen
+import com.mubaracktahir.ebirapeople.UI.OnboardingScreen.screens.ThirdScreen
 import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.databinding.FragmentOnBoarderParentBinding
 import kotlinx.android.synthetic.main.fragment_on_boarder_parent.view.*
 
 
-class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fragment_on_boarder_parent) {
+class OnBoarderParent :
+    BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fragment_on_boarder_parent) {
     var firstTime = true
     override fun init() {
         //List of Fragments in the onBoarding Screen
@@ -29,13 +28,12 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
         )
 
         binding.linearLayout.setOnClickListener {
-            when(binding.viewPager2.currentItem){
+            when (binding.viewPager2.currentItem) {
                 0 -> binding.viewPager2.setCurrentItem(1)
                 1 -> binding.viewPager2.setCurrentItem(2)
                 2 -> {
 
                     navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
-                    onBoardingFinished()
                 }
             }
         }
@@ -102,21 +100,5 @@ class OnBoarderParent : BaseFragment<FragmentOnBoarderParentBinding>(R.layout.fr
             textViews[position]?.setTextColor(Color.parseColor("#FFBA38"))
 
     }
-    private fun onBoardingFinished() {
-        val sharedPref = requireActivity().getPreferences(
-            Context.MODE_PRIVATE
-        ) ?: return
-        with(sharedPref.edit()){
-            putBoolean("finished",true)
-            commit()
-        }
-     /*   val editor = sharedPref.edit()
-        editor.putBoolean("finished", true)
-
-        editor.apply()
-*/
-        Toast.makeText(context,"${sharedPref.getBoolean(passString(R.string.com_mubaracktahir_ebirapeople_onboarding_finished),false)}", Toast.LENGTH_LONG).show()
-
-    }
-
 }
+

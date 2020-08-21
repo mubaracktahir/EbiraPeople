@@ -1,6 +1,7 @@
 package com.mubaracktahir.ebirapeople.utils.Views
 
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mubaracktahir.ebirapeople.R
@@ -30,6 +31,11 @@ class PlacesDisplayerFragment :
             )
         val place = args.place
         binding.place = place
+
+        binding.fabs.setOnClickListener {
+            //activity?.supportFragmentManager?.popBackStack()
+            view?.findNavController()?.popBackStack()
+        }
 
         binding.root.recycler.let { _recyclerView ->
             _recyclerView.setHasFixedSize(true)

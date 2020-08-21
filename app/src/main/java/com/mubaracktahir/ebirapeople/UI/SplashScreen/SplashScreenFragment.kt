@@ -13,7 +13,7 @@ class SplashScreenFragment :
         super.onResume()
         Handler().postDelayed(
             {
-                if (onBoardingFinish()!!) {
+                if (onBoardingFinish()) {
                     view?.let { _view ->
                         Navigation.findNavController(_view)
                             .navigate(R.id.action_splashScreenFragment_to_homeFragment)
@@ -28,12 +28,10 @@ class SplashScreenFragment :
         )
     }
 
-    private fun onBoardingFinish(): Boolean? {
-        val sharedPref = activity?.getPreferences(
-            Context.MODE_PRIVATE
-        )
-        return sharedPref?.getBoolean(
-            getString(R.string.com_mubaracktahir_ebirapeople_onboarding_finished),
+    private fun onBoardingFinish(): Boolean {
+        val sharedPref = requireActivity().getSharedPreferences("onBoardingScreen", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean(
+            resources.getString(R.string.com_mubaracktahir_ebirapeople_onboarding_finished),
             false
         )
 

@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="person"
             type="com.mubaracktahir.ebirapeople.models.People" />
@@ -10,9 +12,24 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:background="#5B6265"
         android:layout_height="match_parent"
+        android:background="@color/bgrd"
         tools:context=".UI.HistoryFragment.HistoryFragment">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabs"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            app:pressedTranslationZ="0dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:outlineProvider="none"
+            app:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/left_arrow" />
+
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -38,6 +55,7 @@
                     tools:srcCompat="@drawable/p10" />
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -51,12 +69,12 @@
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_below="@id/image"
                     android:layout_weight="50"
                     android:background="@drawable/half_cut"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
                     app:layout_constraintTop_toBottomOf="@+id/image"
                     tools:layout_editor_absoluteX="0dp">
 
@@ -91,11 +109,11 @@
                     <TextView
                         android:id="@+id/description"
                         android:layout_width="0dp"
-                        android:paddingBottom="20dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="15dp"
+                        android:paddingBottom="20dp"
                         android:text="@string/history_of_ebira_people"
                         android:textColor="@android:color/white"
                         android:textSize="15sp"

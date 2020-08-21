@@ -20,6 +20,7 @@
             android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:elevation="0dp"
             android:background="@color/background">
 
             <androidx.appcompat.widget.Toolbar
@@ -33,33 +34,30 @@
 
                     <TextView
                         android:id="@+id/text_hi"
+                        style="@style/TextAppearance.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_15dp_margin"
                         android:layout_marginTop="16dp"
-                        android:fontFamily="@font/raleway_medium"
-                        android:text="@string/hi"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/normal_textSize"
-                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/hi" />
 
                     <TextView
                         android:id="@+id/greeting_text"
-                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_15dp_margin"
+                        style="@style/TextAppearance.SubTitle"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:fontFamily="@font/raleway_medium"
-                        tools:text="@string/good_evening"
                         android:textColor="#FFBA38"
-                        android:textSize="@dimen/normal_textSize"
                         android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/floatingActionButton"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/text_hi" />
+                        app:layout_constraintTop_toBottomOf="@+id/text_hi"
+                        tools:text="@string/good_night" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/floatingActionButton"
@@ -71,23 +69,20 @@
                         android:foreground="?attr/selectableItemBackground"
                         android:src="@drawable/day"
                         app:fabSize="mini"
-
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.95"
                         app:layout_constraintStart_toEndOf="@+id/text_hi"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.appcompat.widget.Toolbar>
 
             <FrameLayout
-                android:layout_marginTop="10dp"
-
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="0dp"
+                android:layout_marginEnd="10dp">
                 <include layout="@layout/search_template" />
             </FrameLayout>
         </com.google.android.material.appbar.AppBarLayout>
@@ -100,24 +95,21 @@
 
             <LinearLayout
                 android:id="@+id/linear"
-                android:paddingBottom="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
 
 
                 <TextView
                     android:id="@+id/textView6"
+                    style="@style/TextAppearance.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/muli_light"
                     android:text="@string/beautiful_places"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.096"
                     app:layout_constraintStart_toStartOf="parent"
@@ -126,9 +118,9 @@
                 <FrameLayout
                     android:id="@+id/frameLayout"
                     android:layout_width="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:layout_height="@dimen/beautiful_places_height"
                     android:layout_marginTop="@dimen/_12dp_margin"
+                    android:layout_marginBottom="@dimen/margin_20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -140,16 +132,14 @@
                         android:layout_height="match_parent"
                         android:paddingStart="80dp"
                         android:paddingEnd="80dp"
-                        tools:listitem="@layout/beautiful_places_item"/>
+                        tools:listitem="@layout/beautiful_places_item" />
                 </FrameLayout>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/historyCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/_15dp_margin"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
+                    style="@style/CardView.CardViewStyle"
                     app:cardCornerRadius="@dimen/_15dp_margin">
 
                     <RelativeLayout
@@ -159,13 +149,11 @@
                         android:gravity="center">
 
                         <TextView
+                            style="@style/TextAppearance.Title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/muli_bold"
                             android:text="@string/history"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/normal_textSize"
-                            android:textStyle="bold" />
+                             />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -174,9 +162,7 @@
                     android:id="@+id/cultureCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/_15dp_margin"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
+                    style="@style/CardView.CardViewStyle"
                     app:cardCornerRadius="@dimen/_15dp_margin">
 
                     <RelativeLayout
@@ -188,11 +174,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/muli_bold"
+                            style="@style/TextAppearance.Title"
                             android:text="@string/culture"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/normal_textSize"
-                            android:textStyle="bold" />
+                            />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -201,9 +185,7 @@
                     android:id="@+id/peopleCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/_15dp_margin"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
+                    style="@style/CardView.CardViewStyle"
                     app:cardCornerRadius="@dimen/_15dp_margin">
 
                     <RelativeLayout
@@ -213,13 +195,11 @@
                         android:gravity="center">
 
                         <TextView
+                            style="@style/TextAppearance.Title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/muli_bold"
                             android:text="@string/people"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/normal_textSize"
-                            android:textStyle="bold" />
+                            />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -228,8 +208,7 @@
                     android:id="@+id/entertainmentCard"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground"
+                    style="@style/CardView.CardViewStyle"
                     app:cardCornerRadius="@dimen/_15dp_margin">
 
                     <RelativeLayout
@@ -237,14 +216,13 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/history_background"
                         android:gravity="center">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/muli_bold"
+                            style="@style/TextAppearance.Title"
                             android:text="@string/entertainment"
-                            android:textColor="@android:color/white"
-                            android:textSize="@dimen/normal_textSize"
-                            android:textStyle="bold" />
+                            />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>

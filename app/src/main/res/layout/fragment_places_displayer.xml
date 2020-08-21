@@ -13,14 +13,28 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#5B6265"
+        android:background="@color/darkHarshColor"
         tools:context=".utils.Views.PlacesDisplayerFragment">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabs"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            app:pressedTranslationZ="0dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:outlineProvider="none"
+            app:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/left_arrow" />
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
+            android:backgroundTint="@color/transparent"
             app:elevation="0dp">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -33,6 +47,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_280sdp"
+                    android:contentDescription="@string/beautiful_places"
                     android:scaleType="centerCrop"
                     app:image="@{place}"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -68,23 +83,24 @@
                         android:id="@+id/horizontal_line"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
+                        android:layout_marginStart="@dimen/_margin_30dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/horizontal_line"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+
                         android:id="@+id/name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="@dimen/_12dp_margin"
+                        android:layout_marginEnd="@dimen/_12dp_margin"
                         android:fontFamily="@font/raleway_heavy"
                         android:text="Upugu water fall"
                         android:textAllCaps="true"
-                        android:textColor="#FFBA38"
+                        android:textColor="@color/orange"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.083"
@@ -97,14 +113,10 @@
                         android:id="@+id/description"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="@dimen/_15dp_margin"
+                        android:layout_marginTop="@dimen/_5dp_margin"
+                        android:layout_marginEnd="@dimen/_15dp_margin"
                         android:paddingBottom="20dp"
-                        tools:text="This is the palace of Alhaji Ibrahim Onoruoiza Atta, the late Ohinoyi of Ebiraland who ruled ruled over Ebiraland between 1917 – 1954, as the first British appointed Chief who exercised influence over the entire Ebiraland.
-                    mThe palace is well architectural constructed with a wide open spaced compound and a podium under a big tree in which the Ohinoyi addresses his people and pass judgements.
-                    As a young man, he learnt the art of statesmanship from his grandfather, Atta Omadivi. He also also learnt business from his industrious mother, and was widely travelled. He was a fast learner and learnt to speak different languages which are Hausa, Nupe, Igala, Edo, Tiv, Yoruba, Igbo, Pidgin english.He demonstrated great patriotism and devotion to his domain, evidenced in the many developmental projects he accomplished during his reign. As early as 1923, the first Native Authority School (NA) was founded in Okene.
-                    The Atta exposed his domain to the outside world through the construction of a network of roads, effectively positioning Okene as the gateway between the North and South. Realising the essence of portable water for the health of his people, the Atta, in 1937, constructed a dam for Okene to provide pipe borne water for the township which is still serving the Okene populace. He was the first Anebira to learn the Quran and spearheaded the construction of a befitting central mosque at Okene which is still been used till date. He also welcomed and accommodated the first missionaries who freely propagated the teachings of Christianity."
                         android:textColor="@android:color/white"
                         android:textSize="15sp"
                         app:description="@{place}"
@@ -112,7 +124,11 @@
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/name"
-                        tools:layout_height="200dp" />
+                        tools:layout_height="200dp"
+                        tools:text="This is the palace of Alhaji Ibrahim Onoruoiza Atta, the late Ohinoyi of Ebiraland who ruled ruled over Ebiraland between 1917 – 1954, as the first British appointed Chief who exercised influence over the entire Ebiraland.
+                    mThe palace is well architectural constructed with a wide open spaced compound and a podium under a big tree in which the Ohinoyi addresses his people and pass judgements.
+                    As a young man, he learnt the art of statesmanship from his grandfather, Atta Omadivi. He also also learnt business from his industrious mother, and was widely travelled. He was a fast learner and learnt to speak different languages which are Hausa, Nupe, Igala, Edo, Tiv, Yoruba, Igbo, Pidgin english.He demonstrated great patriotism and devotion to his domain, evidenced in the many developmental projects he accomplished during his reign. As early as 1923, the first Native Authority School (NA) was founded in Okene.
+                    The Atta exposed his domain to the outside world through the construction of a network of roads, effectively positioning Okene as the gateway between the North and South. Realising the essence of portable water for the health of his people, the Atta, in 1937, constructed a dam for Okene to provide pipe borne water for the township which is still serving the Okene populace. He was the first Anebira to learn the Quran and spearheaded the construction of a befitting central mosque at Okene which is still been used till date. He also welcomed and accommodated the first missionaries who freely propagated the teachings of Christianity." />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,8 +151,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:textAllCaps="true"
                         android:fontFamily="@font/raleway_heavy"
+                        android:textAllCaps="true"
                         android:textColor="@android:color/white"
                         android:textSize="16sp"
                         app:name="@{place}" />
@@ -147,7 +163,7 @@
                     android:id="@+id/recycler"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="15dp"
+                    android:layout_margin="@dimen/_15dp_margin"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="5"
                     tools:listitem="@layout/more_pictures_item"

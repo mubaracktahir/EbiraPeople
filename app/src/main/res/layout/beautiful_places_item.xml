@@ -19,6 +19,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/upugu_1_" />
             <Button
+                android:id="@+id/destination"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_alignBottom="@+id/place"

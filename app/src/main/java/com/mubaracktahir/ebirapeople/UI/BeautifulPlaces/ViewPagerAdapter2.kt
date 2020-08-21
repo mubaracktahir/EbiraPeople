@@ -3,6 +3,7 @@ package com.mubaracktahir.ebirapeople.UI.BeautifulPlaces
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.mubaracktahir.ebirapeople.R
@@ -16,8 +17,7 @@ import kotlinx.android.synthetic.main.beautiful_places_item.view.*
  * mubarack.tahirr@gmail.com
  */
 class ViewPagerAdapter2(
-    val viewPager2: ViewPager2?
-    ,
+    val viewPager2: ViewPager2?,
     val clickCallBack: (place: Place, position : Int) -> Unit
 ) : RecyclerView.Adapter<ViewPagerAdapter2.MyViewHolder>() {
     var places = ArrayList<Place>()
@@ -31,7 +31,9 @@ class ViewPagerAdapter2(
 
         fun bind(place: Place, position: Int, clickCallBack: (place: Place, position : Int) -> Unit) {
             view.place.setImageResource(place.images[0])
-
+            view.destination.setOnClickListener {
+                Toast.makeText(view.context,"Coming Soon", Toast.LENGTH_LONG).show()
+            }
             view.setOnClickListener {
                 clickCallBack(place,position)
             }

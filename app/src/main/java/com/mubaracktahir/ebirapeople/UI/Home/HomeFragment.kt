@@ -30,7 +30,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
      *
      */
     private fun setUpWidget() {
-        binding.textHi.append(" ${getEmoji(0x1F44B)},")
+        binding.textHi.append("${passString(R.string.hi)} ${getEmoji(0x1F44B)},")
         binding.greetingText.text = sayGreetings()
         binding.historyCard.setOnClickListener {
             navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
@@ -44,6 +44,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.entertainmentCard.setOnClickListener {
             navigate(HomeFragmentDirections.actionHomeFragmentToEntertainmentFragment())
         }
+
         // seting up the beautifulPlaces viewPager
         setUpBeautifulPlaces()
     }
