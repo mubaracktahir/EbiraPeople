@@ -23,31 +23,24 @@
 
         <TextView
             android:id="@+id/textView3"
+            style="@style/TextAppearance.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/raleway_medium"
-            android:text="KNOW OUR CULTURE"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:text="@string/know_our_culture"
             app:layout_constraintEnd_toEndOf="parent"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             tools:textColor="@android:color/black" />
 
         <TextView
+            style="@style/TextAppearance.Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="11dp"
-            android:fontFamily="@font/muli_light"
+            android:layout_marginStart="@dimen/_12dp_margin"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/_12dp_margin"
             android:gravity="center"
             android:text="@string/second_onboarding_text"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

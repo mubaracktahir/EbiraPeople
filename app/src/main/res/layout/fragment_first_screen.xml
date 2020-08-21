@@ -6,9 +6,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-
         android:gravity="center_horizontal"
+
+        android:orientation="vertical"
         tools:context=".UI.OnboardingScreen.screens.FirstScreen">
 
         <ImageView
@@ -27,30 +27,24 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:textColor="@android:color/white"
+            style="@style/TextAppearance.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/raleway_medium"
-            android:text="The OHINOYI OF EBIRA"
-            tools:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:text="@string/the_ohinoyi_of_ebira"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:textColor="@android:color/black" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="11dp"
-            android:fontFamily="@font/muli_light"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_12"
+            style="@style/TextAppearance.Title"
             android:gravity="center"
             android:text="@string/first_message"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

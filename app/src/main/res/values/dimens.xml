@@ -7,6 +7,10 @@
     <dimen name="normal_textSize">20sp</dimen>
     <dimen name="mini_textSize">16sp</dimen>
     <dimen name="beautiful_places_height">250dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="_margin_60dp">60dp</dimen>
+    <dimen name="_margin_30dp">30dp</dimen>
 
 
 </resources>
