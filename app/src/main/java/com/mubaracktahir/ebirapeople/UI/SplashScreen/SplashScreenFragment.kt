@@ -6,6 +6,7 @@ import androidx.navigation.Navigation
 import com.mubaracktahir.ebirapeople.R
 import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.databinding.FragmentSplashScreenBinding
+import com.mubaracktahir.ebirapeople.utils.Constants
 
 class SplashScreenFragment :
     BaseFragment<FragmentSplashScreenBinding>(R.layout.fragment_splash_screen) {
@@ -24,7 +25,7 @@ class SplashScreenFragment :
                             .navigate(R.id.action_splashScreenFragment_to_welcomeScreen)
                     }
                 }
-            }, 1000
+            }, Constants.ONE_SECOND
         )
     }
 

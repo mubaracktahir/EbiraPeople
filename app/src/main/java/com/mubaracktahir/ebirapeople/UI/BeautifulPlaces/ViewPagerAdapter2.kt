@@ -1,5 +1,6 @@
 package com.mubaracktahir.ebirapeople.UI.BeautifulPlaces
 
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +33,7 @@ class ViewPagerAdapter2(
         fun bind(place: Place, position: Int, clickCallBack: (place: Place, position : Int) -> Unit) {
             view.place.setImageResource(place.images[0])
             view.destination.setOnClickListener {
-                Toast.makeText(view.context,"Coming Soon", Toast.LENGTH_LONG).show()
+                Toast.makeText(view.context,view.context.getString(R.string.coming_soon), Toast.LENGTH_LONG).show()
             }
             view.setOnClickListener {
                 clickCallBack(place,position)

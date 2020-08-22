@@ -1,6 +1,6 @@
 package com.mubaracktahir.ebirapeople.UI.Home
 
-import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.ViewPager2
@@ -9,6 +9,7 @@ import com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.ViewPagerAdapter2
 import com.mubaracktahir.ebirapeople.core.BaseFragment
 import com.mubaracktahir.ebirapeople.databinding.FragmentHomeBinding
 import com.mubaracktahir.ebirapeople.models.Place
+import com.mubaracktahir.ebirapeople.utils.Constants
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -18,8 +19,7 @@ import kotlin.collections.ArrayList
  */
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
-
-    private fun getEmoji(uniCode : Int) = String(Character.toChars(uniCode))
+    private fun getEmoji(uniCode: Int) = String(Character.toChars(uniCode))
     override fun init() {
         setUpWidget()
     }
@@ -91,7 +91,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                     R.drawable.ak4
                 )
             )
-          add(
+            add(
                 Place(
                     getString(R.string.be2),
                     getString(R.string.be2_d),
@@ -102,8 +102,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             )
 
         }
-
-
         //passing all the beautiful places to the ViewPager
         adapter.places = mPlaces
         binding.recycler.adapter = adapter
@@ -113,12 +111,19 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(SelectedPageZoomer())
         binding.recycler.setPageTransformer(compositePageTransformer)
-        android.os.Handler().postDelayed(
-            {
-                binding.recycler.adapter = adapter
-                binding.recycler.setCurrentItem(2)
-            }, 500
-        )
+        binding.recycler.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == mPlaces.lastIndex) {
+                    handler.postDelayed(Runnable {
+                        binding.recycler.setCurrentItem(position * 0)
+                    },1000)
+                } else {
+                    handler.removeCallbacks(runnable)
+                    handler.postDelayed(runnable, 1000)
+                }
+            }
+        })
     }
 
     class SelectedPageZoomer : ViewPager2.PageTransformer {
@@ -145,16 +150,26 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         // gets the current hour of the day
         val currentTimeOfTheDay = cal.get(Calendar.HOUR_OF_DAY)
         return when (currentTimeOfTheDay) {
-            in 0..11 -> "${passString(R.string.good_mornig) } ${getEmoji(0x26C8)}"
-            in 12..15 ->  "${passString(R.string.good_afternoon) } ${getEmoji(0x1F31E)}"
-            in 16..20 -> "${passString(R.string.good_evening) } ${getEmoji(0x1F31B)}"
-            else -> "${passString(R.string.good_night) } ${getEmoji(0x1F644)}"
+            in 0..11 -> "${passString(R.string.good_mornig)} ${getEmoji(0x26C8)}"
+            in 12..15 -> "${passString(R.string.good_afternoon)} ${getEmoji(0x1F31E)}"
+            in 16..20 -> "${passString(R.string.good_evening)} ${getEmoji(0x1F31B)}"
+            else -> "${passString(R.string.good_night)} ${getEmoji(0x1F644)}"
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        //shuffle beautiful places
-        setUpBeautifulPlaces()
+    private val runnable = Runnable {
+        binding.recycler.let {
+            it.setCurrentItem(it.currentItem + 1)
+        }
+    }
+    private val handler = Handler()
+    override fun onResume() {
+        super.onResume()
+        handler.postDelayed(runnable, Constants.ONE_SECOND)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacks(runnable)
     }
 }
