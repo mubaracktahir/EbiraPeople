@@ -38,7 +38,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_15dp_margin"
-                        android:layout_marginTop="16dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +51,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:textColor="#FFBA38"
+                        android:textColor="@color/orange"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@id/floatingActionButton"
                         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +62,7 @@
                         android:id="@+id/floatingActionButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="@dimen/_15dp_margin"
                         android:backgroundTint="@android:color/white"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -80,9 +79,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/_margin_10dp"
                 android:elevation="0dp"
-                android:layout_marginEnd="10dp">
+                android:layout_marginEnd="@dimen/_margin_10dp">
                 <include layout="@layout/search_template" />
             </FrameLayout>
         </com.google.android.material.appbar.AppBarLayout>
@@ -97,12 +96,10 @@
                 android:id="@+id/linear"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="@dimen/_margin_10dp"
+                android:layout_marginEnd="@dimen/_margin_10dp"
                 android:orientation="vertical"
-                android:paddingBottom="50dp">
-
-
+                android:paddingBottom="@dimen/_margin_50dp">
                 <TextView
                     android:id="@+id/textView6"
                     style="@style/TextAppearance.Title"
@@ -130,8 +127,8 @@
                         android:id="@+id/recycler"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:paddingStart="80dp"
-                        android:paddingEnd="80dp"
+                        android:paddingStart="@dimen/_margin_80dp"
+                        android:paddingEnd="@dimen/_margin_80dp"
                         tools:listitem="@layout/beautiful_places_item" />
                 </FrameLayout>
 

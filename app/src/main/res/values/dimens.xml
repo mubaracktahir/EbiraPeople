@@ -11,6 +11,9 @@
     <dimen name="margin_20dp">20dp</dimen>
     <dimen name="_margin_60dp">60dp</dimen>
     <dimen name="_margin_30dp">30dp</dimen>
+    <dimen name="_margin_10dp">10dp</dimen>
+    <dimen name="_margin_50dp">50dp</dimen>
+    <dimen name="_margin_80dp">80dp</dimen>
 
 
 </resources>
