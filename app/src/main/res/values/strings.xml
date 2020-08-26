@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Ebira People</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <!-- onBoarding screen texts -->
+
     <string name="welcome_text">The Ebiras like all other nationalities in the world have their own
         heroes and heroines. The Ebira speaking people are scattered in four locations in Nigeria.  </string>
     <string name="underline_ebira"><u>Ebira</u></string>
@@ -16,12 +16,11 @@
     <string name="first_message">Get to know our Royal History.</string>
     <string name="last_onboarding_text">Have a view of amazing places Like the palace of the Ohinoyi of Ebira Land</string>
 
-
-    <!--Home Fragment-->
+    <!-- Home Fragment -->
     <string name="good_mornig"> Nyene</string>
     <string name="good_afternoon"> Nyari odu</string>
     <string name="good_evening"> Nyari oruva </string>
-    <string name="good_night">Good Night, you are suppose to be in bed</string>
+    <string name="good_night">Aduhuo, Avuru ka wa suara boraanini</string>
     <string name="sleeping">You\'re supposed to be sleeping </string>
     <string name="beautiful_places">Beautiful Places</string>
     <string name="hi">Tao </string>
@@ -37,8 +36,10 @@
     <!-- Iconic People Fragment names and description-->
     <string name="p2">ODODO AND OBAJI</string>
     <string name="p2_d">The Ebiras are said to have descended from these two great ancestors who were said to be brothers. These two great ‘Ohiku Anebira’ are our greatest heroes of our time because they set all the moral standards by which we lived before the coming of Christianity and Islam that approved or confirmed some of the ethics and rules. They also established dos and don’ts and prescribed  the appropriate punishments for the violators/offenders and other deviants in the then</string>
+
     <string name="p3">OBEGE</string>
     <string name="p3_d">Obege was said to be a great medicine man. He used his magical power to solve people’s problems and did not cause any problem for anybody. He cured all sorts of ailments, made the barren fertile (solving barrenness of couples) and also appeased God on behalf of the people for rains to fall whenever there was unexpected drought in Ebiraland. He attempted to reach God through the long thread contributed by the people and came back through the earth to the ground when the long thread on the ground was exhausted. As a result of the mystery surrounding how his grave opened in the centre of flat rock by itself and closed by itself after burial, Achewuru sang a song, lamenting that if the Ebiras had known, they would have designated his grave yard as a tourist attraction where he believed that some Muslim Pilgrims after visiting Medina would have thought of going there to also pay homage!</string>
+
     <string name="p4">ZAINAB IYEB</string>
     <string name="p4_d">She was the mother of Attah of Ebiraland. She was a big time business woman who travelled far and wide. She also understood and spoke many languages. She is our first heroine by any standard used, first by giving birth to such a colossus as the Attah of Ebiraland and secondly, by being instrumental in the emergence of her son as the first and only Attah of Ebiraland at the young age of 17years.
 
@@ -81,18 +82,22 @@
 
 
         Onono Idogido – Great social crusader and leader of 1951 women revolt against taxation.</string>
+
     <string name="p5">ALHAJI ONORUOIZA ARAGARAGA LEREMA IBRAHIM</string>
     <string name="p5_d">He was the first and only Attah of Ebiraland who came to the throne in 1917 and ruled for several decades. His reign witnessed visible developments like roads construction within and outside Ebiraland, construction of Water Works and the building of the Ebira Central Mosque. The Ebira Central Mosque at the time of its construction was second of its kind after Ibadan Central Mosque in Nigeria. He was the first Ebira man to go to</string>
+
     <string name="p6"> Alh.(Dr.) AbdulRahman Ado Ibrahim (HRH)</string>
     <string name="p6_d">The Ohinoyi Of Ebiraland.
         Born on 7th Feb. 1929.He assumed the office of Ohinoyi of Ebiraland, 2nd June 1997, after the passing away of the former Ohinoyi, Alhaji Sanni Omolori who ruled for 40 years and 40 days as Ohinoyi of Ebiraland.
         Alh.(Dr.) AbdulRahman Ado Ibrahim attended a Nursery and Quranic School and later finished his primary education from NA School in Okene, Kogi State in 1940. He later went to Ondo Boys high School and Oduduwa College and rounding up his secondary education in 1949.
         He obtained a B.Sc in Economics from London School in 1954 and an MBA from Harvard business School, 1959. His enthronement as the Ohinoyi of Ebiraland was a grand occasion, attended by thousands of Ebiras and international diplomats and was broadcast on major Nigerian Television stations for days. He rules Ebiraland from his magnificent pavilion, AZAD Palace named after his son.The palace is rated as one of the most beautiful palaces in west Africa.
         Captivating, majestic, wide and strategically located around Inioziomi area of Okene. This palace\'s minarets shoot high and view able from many high grounds in Okene and neighboring part of ebiraland.</string>
+
     <string name="p7">ALHAJI SHEHU MUSA GALADIMA</string>
     <string name="p7_d">He was selected as the Chief Imam of Ebira Central Mosque through divine intervention by God when there was a crisis over the position of the chief Imamship of Ebira Central Mosque. Since then, he had never disappointed the Ebiras because peace and unity of the Ebiras have been the hallmarks of his sermons over these decades.
         He is a peacemaker, a bridge builder and a society developer who has left an indelible mark in the history of Ebiraland,
         He died at the age of 98yrs and served as the Chief Imam of Ebiraland for 55yrs</string>
+
     <string name="p8">SENATOR AT AHMED (December 17, 1941 – June 10, 2006)</string>
     <string name="p8_d">He was a Nigerian politician who was Senator for the Kogi Central constituency in Kogi State from 1999 to 2003 as a member of the People\'s Democratic Party (PDP).
         When Kogi State was created in 1991, Ahmed Tijani Ahmed joined a group of liberal progressive politicians in the Social Democratic Party (SDP) that created an agreement on power sharing among the different peoples of the state. However, they lost the December 1991 governorship election to the National Republican Convention (NRC). Abubakar Audu of the NRC was elected and held office until General Sani Abacha assumed power in November 1993.
@@ -106,12 +111,14 @@
     <string name="p9_d">Bello was born June 18, 1975 in Okene, Kogi State, the youngest of six children. He attended Local Government Education Authority (Nigeria) (LGEA) Primary School, Agassa in Okene LGA beginning in 1984. He was named as a class prefect of class two and was made the school Head Boy in class six
         He attended high school at Agassa Community Secondary School, Anyava, Agassa-Okene and obtained his Junior Secondary School Certificate Examination (JSSCE) and Senior Secondary Certificate Examination (SSCE) certificates from Government Secondary School, Suleja-Niger State in 1994. Bello studied at Kaduna State Polytechnic Zaria in 1995 and obtained an accounting degree from Ahmadu Bello University ABU Zaria in 1999. Yahaya Bello further enrolled for a Masters program in Ahmadu Bello University in Zaria where he obtained Masters in Business Administration (MBA) in 2002. Bello became a chartered fellow of the Association of National Accountants of Nigeria in 2004.
         Bello was declared winner of the 2015 Kogi gubernatorial election after he was chosen on the platform of the All Progressives Congress as the replacement for the late Abubakar Audu who originally won the election but died before the result was declared. On the 16 November 2019, Bello was re-elected after he defeated the PDP opposition by over 200,000 votes.</string>
+
     <string name="p10">Natasha Hadiza Akpoti</string>
     <string name="p10_d">(born in 1979) is a Nigerian barrister, social entrepreneur and politician. She ran for the post of Kogi Central Senatorial District (SDP) seat under Social Democratic Party in the year 2019. She contested in the Kogi State Governorship election which held on the 16th of November 2019. She is the founder of Builders Hub Impact Investment Program (BHIIP).
 
         Natasha, the second of four children, and the only daughter of a Nigerian father and a Ukrainian mother. Her mother, Ludmila Kravchenk, is a Ukrainian from Rakitna in the region of Chernivtsi. Her father, Dr. Jimoh Abdul Akpoti, is from Obeiba-Ihima, Kogi State. She spent her early years in Ihima, Okene Local Government She lost her father in 1998 and the family had to relocate. She studied at the University of Abuja from 2000 to 2004 and graduated with a Bachelor of Laws degree. She was called to the Nigerian bar in 2005 upon graduation from the Nigerian Law School in Abuja. In 2011, she proceeded to the University of Dundee and graduated with a Master of Laws degree in 2012. She holds a Master of Business Administration in Oil and Gas Management from the University of Dundee.
         After graduation from the Nigerian Law School, she worked with Brass NLG as a legal counsel from 2007 to 2010. In 2015, she established Builders Hub Impact Investment Program (BHIIP).
         She came to national prominence after presenting an investigative report to the National Assembly on the 1st of March 2018 on corrupt activities regarding the Ajaokuta steel mill. The report detailed the repetitive waste of government funds and embezzlement since the initial construction of the steel mill which has remained moribund despite multiple attempts to get it running. The report was opposed by the Federal ministry of mines and steel development and Akpoti was accused of deliberately misinforming the House of Representatives. An association of small scale steel dealers also alleged that Akpoti was running a sponsored campaign to discredit the government and enrich some corporate interests. A High Court sitting in Abuja ordered that the publisher of Authority newspaper, Ifeanyi Uba and Williams Orji should pay the sum of ten million naira damages to Natasha Akpoti for their libelous publication against her.</string>
+
     <string name="p11">Alhaji ABDULMALIK ATTA</string>
     <string name="p11_d">The man who brought the letter of independent to Nigeria Alhaji Abdulmalik Atta (1914-1969).
         In 1951, Abdulmalik was nominated by the Native Authority (N.A) to the Northern Regional House of Assembly in Kaduna.
@@ -125,6 +132,7 @@
     <string name="p12_d">Ajana was born in Okene Local Government Area in Kogi State to MJ Fari Ajanah. Ajana received early education at the Native Authority (Central) Primary School, Okene between 1962 and 1968. In 1969, he enrolled in Federal Government College, Keffi and graduated in 1973. In 1974, Ajana enrolled in the same college for a Higher School Certificate (HSC) finishing in 1975. Ajana earned LLB from Ahmadu Bello University, Zaria. He attended Nigerian Law School and was subsequently called to the Nigerian Bar as a Barrister and Solicitor of the Supreme Court of Nigeria. Ajana\'s legal career started at the Kwara State Ministry of Justice where he served as State Counsel (1982-1984). In 1984, he established his own private firm, Nasiru Ajana and Co in Okene until 1989 when he was appointed a Judge of Kwara State High Court. He was transferred to Kogi State after its creation in 1991.
         Prior to his appointment as Chief Judge of Kogi State, Ajana had served in different capacities. In 1994, Ajana served on the Kabba disturbance tribunal in Kogi State as Chairman. Ajana was Chairman, Election petition tribunal in Adamawa State for the 1998 general elections; Member, Governing board of Nigerian Institute of Advanced Legal Studies (1999-2006); Chairman, Panel on Muritala Mohammed International Airport Fire Incidence (2000); Chairman, Election petition Tribunal in Akwa – Ibom State (2007) and Chairman; Election Tribunal Petition (2) in Rivers State (2008).
         In early 2018, the executive and legislative arm of government in Kogi State commenced a move to remove Ajana from office for an alleged gross misconduct. The State House of Assembly had passed a resolution recommending that the governor remove Ajana from office. Ajana however approached a High Court in Koton Karfe, for an interpretation of the constitution on whether the State House of Assembly and the governor could sack the Chief Judge of the state from office. The court ruled that the Legislature acting jointly with the Executive or unilaterally lacks the powers to remove the Chief Judge of the state without recourse to National Judicial Council (NJC). The Judge in his ruling further stated that "It was an audacious and arbitrary display of naked power, an act that is contrary to all constitutional and democratic tenets.</string>
+
     <string name="p13">Sheikh Muhammad Amin</string>
     <string name="p13_d">Sheikh Muhammad Amin was born on 6th of April 1963 to the family of late Sheikh Abdullah and Bilkis .
         Sheikh remarkable contribution to the growth and maximum development of Islam as a religion is beyond the pen ink to write.
@@ -140,12 +148,14 @@
         Sheikh love for the prophet Muhammad (S. A. W) has engraved him and surpassed worldly acquisition.
         Sheikh taught moderation, tolerance, perseverance and brotherhood among Muslims and their communities regardless of their ideological difference.
         Sheikh re-stated the rules and taught on how to purify the soul and how to worship.</string>
+
     <string name="p14">Oyiza Momoh</string>
     <string name="p14_d">born June 1, 1995) is famous for being TV actress. She currently resides in Glasgow, Scotland, UK. Best known for playing the role of Aneisha Jones in the CBBC television series "M.I. High".
         She has also been a presenter on The Saturday Show.
         Oyiza Momoh was born in Glasgow, Scotland, UK on Thursday, June 1, 1995 (Millennials Generation). She is 24 years old and is a Gemini. She traveled to Kenya to teach life-saving first aid skills. She is a hockey player and began attending Glasgow University in 2015 to study Neuroscience.
         Her family is originally from Nigeria. She has a younger sister named Seyi and her mother’s name is Tola. Oyiza Momoh father’s name is Momoh Jimoh who hailed from #Kogi Central in Nigeria.
         Oyiza Momoh stared in M.I. High, from Series 6-7 (26 episodes). In addition to M.I. High, Momoh has stared in the CBBC television series "The Dog Ate My Homework".</string>
+
     <string name="p15">Mercy Johnson Okojie</string>
     <string name="p15_d">Mercy Johnson-Okojie hails from Okene in Kogi State. Born in Lagos to a former naval officer, Mr Daniel Johnson and Mrs Elizabeth Johnson, she is the fourth child in a family of seven. She started her primary education in Calabar. Her father, being a naval officer, was later transferred to Lagos State where she continued her education at a Nigerian Navy Primary School. She went to a Rivers State Secondary School for her secondary education in addition to the Nigerian Navy Secondary School in Port Harcourt, Rivers State..
 
@@ -160,8 +170,10 @@
 
     <string name="p18">PROFESSOR NUHU YAQUB</string>
     <string name="p18_d">He is one of the early professors the Ebiras could boast of. He was two times Vice-Chancellor of Usman Dan Fodio University, Sokoto and one time Vice-Chancellor University of Abuja.</string>
+
     <string name="p19">ALHAJI MUSA ETUDAIYE</string>
     <string name="p19_d">He used his position as a permanent Secretary in the then Kwara State Civil Service to get some job for qualified Ebira people.</string>
+
     <string name="p20">RETIRED GENERAL AMUDA ABUBAKAR</string>
     <string name="p20_d">He used his little position when he was in service to enlist some of the young qualified boys into the Nigerian Army</string>
 
@@ -318,9 +330,13 @@ This Palace\'s minarets shoot high and view able from many high grounds in Okene
 Its located in the far axis of Agassa in Okene.
 Ekuku Dam is a serene environment dominated by farmers,Further research have made it known that there is a cave also known as Ekuku cave some metres away from the dam in which is a resting place for the farmers and also a hide out for our forefathers during times of war in Ebiraland
 This place called a Ekuku as beautiful as it is still needs the Government intervention and reconstruction. Its a place that can be turned into a tourist attraction centre.</string>
+    <!--entertainment fragment-->
     <string name="bloggers">Bloggers</string>
     <string name="photographer">Photographers</string>
+
+    <!-- shared preferences-->
     <string name="com.mubaracktahir.ebirapeople.onboarding.finished">com.mubaracktahir.ebirapeople.onboarding.finished</string>
+
     <string name="the_ohinoyi_of_ebira">The OHINOYI OF EBIRA</string>
     <string name="know_our_culture">KNOW OUR CULTURE</string>
     <string name="the_palace_of_attah">The Palace of Attah</string>

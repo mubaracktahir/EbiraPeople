@@ -13,5 +13,4 @@ class WelcomeScreen : BaseFragment<FragmentWelcomeScreenBinding>(R.layout.fragme
             navigate(WelcomeScreenDirections.actionWelcomeScreenToOnBoarderParent())
         }
     }
-
 }

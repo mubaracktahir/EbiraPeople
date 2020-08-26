@@ -76,8 +76,6 @@
                 style="@style/TextAppearance.SubTitle"
                 android:textColor="@android:color/white"
                 />
-
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
