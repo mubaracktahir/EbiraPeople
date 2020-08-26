@@ -51,5 +51,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
     implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
 
+   // implementation "com.github.zhpanvip:viewpagerindicator:${viewpagerindicatorVersion}"
+
 
 }

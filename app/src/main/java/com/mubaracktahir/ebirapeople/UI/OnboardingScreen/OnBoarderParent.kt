@@ -32,13 +32,11 @@ class OnBoarderParent :
                 0 -> binding.viewPager2.setCurrentItem(1)
                 1 -> binding.viewPager2.setCurrentItem(2)
                 2 -> {
-
                     navigate(OnBoarderParentDirections.actionOnBoarderParentToHomeFragment())
                 }
             }
         }
         addFirstDot(binding)
-
 
         //Listening to page callbacks
         binding.viewPager2.registerOnPageChangeCallback(

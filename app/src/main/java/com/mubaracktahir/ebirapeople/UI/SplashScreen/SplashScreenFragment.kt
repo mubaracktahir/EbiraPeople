@@ -25,7 +25,7 @@ class SplashScreenFragment :
                             .navigate(R.id.action_splashScreenFragment_to_welcomeScreen)
                     }
                 }
-            }, Constants.ONE_SECOND
+            }, Constants.ONE_SECOND + 1000
         )
     }
 
