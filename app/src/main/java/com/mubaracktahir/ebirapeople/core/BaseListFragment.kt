@@ -39,7 +39,6 @@ abstract class BaseListFragment<DB : ViewDataBinding>() : BaseFragment<DB>(R.lay
             _recyclerView.setHasFixedSize(true)
             _recyclerView.layoutManager = LinearLayoutManager(context)
             _recyclerView.adapter = adapter
-
         }
         adapter.people.clear()
         adapter.people.addAll(mPeopleList)
