@@ -16,15 +16,15 @@ class EntertainmentFragment : BaseListFragment<FragmentListBinding>() {
         mPeopleList.add(
             People(
                 passString(R.string.bloggers),
-                "Know more about the likes of: ${passString(R.string.b1)}," +
+                "${passString(R.string.know_more)} ${passString(R.string.b1)}," +
                         "${passString(R.string.b2)},${passString(R.string.b3)} ",
-                R.drawable.demo
+                R.drawable.bloggers
             )
         )
         mPeopleList.add(
             People(
                 passString(R.string.photographer),
-                "Know more about the likes of: ${passString(R.string.ph1)}," +
+                "${passString(R.string.know_more)} ${passString(R.string.ph1)}," +
                         "${passString(R.string.ph2)},${passString(R.string.ph3)} ",
                 R.drawable.photograhy
             )
