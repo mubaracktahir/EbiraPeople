@@ -24,10 +24,8 @@ class MainActivity : AppCompatActivity(), RewardedVideoAdListener {
         super.onCreate(savedInstanceState)
 
 
-        ///D40 nikon
-
-
-        MobileAds.initialize(this,"ca-app-pub-3940256099942544~3347511713")
+        //D40 nikon
+        MobileAds.initialize(this)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this)
         mRewardedVideoAd.rewardedVideoAdListener = this
@@ -36,7 +34,7 @@ class MainActivity : AppCompatActivity(), RewardedVideoAdListener {
     }
 
     private fun loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
+        mRewardedVideoAd.loadAd("ca-app-pub-2619885239553733/6352789853",
             AdRequest.Builder().build())
     }
 
@@ -48,11 +46,19 @@ class MainActivity : AppCompatActivity(), RewardedVideoAdListener {
                     if (mRewardedVideoAd.isLoaded)
                     mRewardedVideoAd.show()
                 }
+                R.id.historyFragment -> {
+                    if (mRewardedVideoAd.isLoaded)
+                        mRewardedVideoAd.show()
+                }
+                R.id.cultureFragment -> {
+                    if (mRewardedVideoAd.isLoaded)
+                        mRewardedVideoAd.show()
+                }
                 R.id.peopleFragment -> {
                     if (mRewardedVideoAd.isLoaded)
                         mRewardedVideoAd.show()
                 }
-                R.id.historyFragment -> {
+                R.id.entertainmentFragment -> {
                     if (mRewardedVideoAd.isLoaded)
                         mRewardedVideoAd.show()
                 }
@@ -62,38 +68,28 @@ class MainActivity : AppCompatActivity(), RewardedVideoAdListener {
     }
 
     override fun onRewarded(reward: RewardItem) {
-        Toast.makeText(this, "onRewarded! currency: ${reward.type} amount: ${reward.amount}",
-            Toast.LENGTH_SHORT).show()
-        // Reward the user.
     }
 
     override fun onRewardedVideoAdLeftApplication() {
-        Toast.makeText(this, "onRewardedVideoAdLeftApplication", Toast.LENGTH_SHORT).show()
     }
 
     override fun onRewardedVideoAdClosed() {
-        Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show()
         loadRewardedVideoAd()
     }
 
     override fun onRewardedVideoAdFailedToLoad(errorCode: Int) {
-        Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show()
     }
 
     override fun onRewardedVideoAdLoaded() {
-        Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show()
     }
 
     override fun onRewardedVideoAdOpened() {
-        Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show()
     }
 
     override fun onRewardedVideoStarted() {
-        Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show()
     }
 
     override fun onRewardedVideoCompleted() {
-        Toast.makeText(this, "onRewardedVideoCompleted", Toast.LENGTH_SHORT).show()
     }
     override fun onPause() {
         super.onPause()

@@ -4,6 +4,9 @@ import android.os.Handler
 import android.view.View
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import com.mubaracktahir.ebirapeople.R
 import com.mubaracktahir.ebirapeople.UI.BeautifulPlaces.ViewPagerAdapter2
 import com.mubaracktahir.ebirapeople.core.BaseFragment
@@ -32,6 +35,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     private fun setUpWidget() {
         binding.textHi.append("${passString(R.string.hi)} ${getEmoji(0x1F44B)},")
         binding.greetingText.text = sayGreetings()
+        val adView = AdView(context)
+        adView.adSize = AdSize.SMART_BANNER
+        adView.adUnitId = getString(R.string.unit_id)
+
+        binding.ads.loadAd(AdRequest.Builder().build())
+
         binding.historyCard.setOnClickListener {
             navigate(HomeFragmentDirections.actionHomeFragmentToHistoryFragment())
         }
@@ -150,7 +159,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         // gets the current hour of the day
         val currentTimeOfTheDay = cal.get(Calendar.HOUR_OF_DAY)
         return when (currentTimeOfTheDay) {
-            in 0..11 -> "${passString(R.string.good_mornig)} ${getEmoji(0x26C8)}"
+            in 6..11 -> "${passString(R.string.good_mornig)} ${getEmoji(0x26C8)}"
             in 12..15 -> "${passString(R.string.good_afternoon)} ${getEmoji(0x1F31E)}"
             in 16..20 -> "${passString(R.string.good_evening)} ${getEmoji(0x1F31B)}"
             else -> "${passString(R.string.good_night)} ${getEmoji(0x1F644)}"

@@ -167,14 +167,12 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/culture_background"
                         android:gravity="center">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TextAppearance.Title"
                             android:text="@string/culture"
                             />
-
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -218,6 +216,30 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TextAppearance.Title"
+                            android:text="@string/entertainment"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/adcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardView.CardViewStyle"
+                    app:cardCornerRadius="@dimen/_15dp_margin">
+
+                    <RelativeLayout
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/history_background"
+                        android:gravity="center">
+
+                        <com.google.android.gms.ads.AdView
+                            android:id="@+id/ads"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            ads:adSize= "SMART_BANNER"
+                            ads:adUnitId="ca-app-pub-2619885239553733/6360722232"
                             android:text="@string/entertainment"
                             />
                     </RelativeLayout>

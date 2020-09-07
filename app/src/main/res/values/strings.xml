@@ -2,7 +2,6 @@
     <string name="app_name">Ebira People</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
     <!-- onBoarding screen texts -->
 
     <string name="welcome_text">The Ebiras like all other nationalities in the world have their own
@@ -324,23 +323,26 @@ after his son. The palace is rated as one of the most beautiful palaces in West 
 Ohinoyi of Ebiraland Palace is Captivating, majestic, wide and strategically
 located around Inioziomi area of Okene.
 This Palace\'s minarets shoot high and view able from many high grounds in Okene and neighboring part </string>
-
     <string name="be4">Ekuku Dam</string>
     <string name="be4_d">Ekuku Dam in Okene, Kogi state.
 Its located in the far axis of Agassa in Okene.
 Ekuku Dam is a serene environment dominated by farmers,Further research have made it known that there is a cave also known as Ekuku cave some metres away from the dam in which is a resting place for the farmers and also a hide out for our forefathers during times of war in Ebiraland
 This place called a Ekuku as beautiful as it is still needs the Government intervention and reconstruction. Its a place that can be turned into a tourist attraction centre.</string>
+
     <!--entertainment fragment-->
     <string name="bloggers">Bloggers</string>
     <string name="photographer">Photographers</string>
 
     <!-- shared preferences-->
     <string name="com.mubaracktahir.ebirapeople.onboarding.finished">com.mubaracktahir.ebirapeople.onboarding.finished</string>
-
     <string name="the_ohinoyi_of_ebira">The OHINOYI OF EBIRA</string>
     <string name="know_our_culture">KNOW OUR CULTURE</string>
     <string name="the_palace_of_attah">The Palace of Attah</string>
     <string name="coming_soon">Coming Soon</string>
 
+
+    <!--Admob ads unit id-->
+    <string name="unit_id">ca-app-pub-2619885239553733/6360722232</string>
+    <string name="ads_id">ca-app-pub-2619885239553733~9282399044</string>
 
 </resources>

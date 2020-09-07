@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "702542120827",
+    "firebase_url": "https://ebira-people.firebaseio.com",
+    "project_id": "ebira-people",
+    "storage_bucket": "ebira-people.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702542120827:android:4c121a2b0c5cd5741b5fde",
+        "android_client_info": {
+          "package_name": "com.mubaracktahir.ebirapeople"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702542120827-qo0rspeh71ptpl5agbrbau30ju7lk68f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mubaracktahir.ebirapeople",
+            "certificate_hash": "ef2e1284ca0a1f74c155c2379ca862f94cf50516"
+          }
+        },
+        {
+          "client_id": "702542120827-ki5f4td7jiq2nov24vmser1m8re4bo87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgchWww7hqpRKZYwwcQz25d0bwKt_kld0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702542120827-ki5f4td7jiq2nov24vmser1m8re4bo87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
