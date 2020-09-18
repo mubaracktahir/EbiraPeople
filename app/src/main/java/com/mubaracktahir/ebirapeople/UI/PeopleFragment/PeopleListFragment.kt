@@ -90,7 +90,7 @@ class PeopleListFragment : BaseListFragment<FragmentListBinding>() {
             People(
                 resources.getString(R.string.p12),
                 resources.getString(R.string.p12_d),
-                R.drawable.p12
+                R.drawable.p25
             )
         )
         mPeopleList.add(
@@ -166,6 +166,14 @@ class PeopleListFragment : BaseListFragment<FragmentListBinding>() {
             People(
                 resources.getString(R.string.p24),
                 resources.getString(R.string.p24_d)
+            )
+        )
+
+        mPeopleList.add(
+            People(
+                resources.getString(R.string.p25),
+                resources.getString(R.string.p25_d),
+                R.drawable.p25
             )
         )
     }
