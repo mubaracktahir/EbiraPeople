@@ -7,8 +7,6 @@
     <color name="bgrd">#5B6265</color>
     <color name="transparent">#00FFFFFF</color>
 
-    <color name="transparentBackgroundColor">#102733</color>
-    <color name="black_overlay">#66000000</color>
     <color name="orange">#FFA700</color>
     <color name="darkHarshColor">#5B6265</color>
 </resources>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="_15dp_margin">15dp</dimen>
-    <dimen name="_13dp_margin">13dp</dimen>
     <dimen name="_12dp_margin">12dp</dimen>
     <dimen name="_5dp_margin">5dp</dimen>
-    <dimen name="normal_textSize">20sp</dimen>
-    <dimen name="mini_textSize">16sp</dimen>
     <dimen name="beautiful_places_height">250dp</dimen>
     <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_20dp">20dp</dimen>

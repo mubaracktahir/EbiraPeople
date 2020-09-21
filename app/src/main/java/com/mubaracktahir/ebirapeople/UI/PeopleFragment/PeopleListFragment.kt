@@ -88,9 +88,16 @@ class PeopleListFragment : BaseListFragment<FragmentListBinding>() {
         )
         mPeopleList.add(
             People(
+                resources.getString(R.string.p26),
+                resources.getString(R.string.p16_d),
+                R.drawable.p26
+            )
+        )
+        mPeopleList.add(
+            People(
                 resources.getString(R.string.p12),
                 resources.getString(R.string.p12_d),
-                R.drawable.p25
+                R.drawable.p12
             )
         )
         mPeopleList.add(
@@ -98,6 +105,13 @@ class PeopleListFragment : BaseListFragment<FragmentListBinding>() {
                 resources.getString(R.string.p13),
                 resources.getString(R.string.p13_d),
                 R.drawable.p13
+            )
+        )
+        mPeopleList.add(
+            People(
+                resources.getString(R.string.p25),
+                resources.getString(R.string.p25_d),
+                R.drawable.p25
             )
         )
         mPeopleList.add(
@@ -169,12 +183,7 @@ class PeopleListFragment : BaseListFragment<FragmentListBinding>() {
             )
         )
 
-        mPeopleList.add(
-            People(
-                resources.getString(R.string.p25),
-                resources.getString(R.string.p25_d),
-                R.drawable.p25
-            )
-        )
+
     }
+
 }

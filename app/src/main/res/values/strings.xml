@@ -20,7 +20,6 @@
     <string name="good_afternoon"> Nyari odu</string>
     <string name="good_evening"> Nyari oruva </string>
     <string name="good_night">Aduhuo, Avuru ka wa suara boraanini</string>
-    <string name="sleeping">You\'re supposed to be sleeping </string>
     <string name="beautiful_places">Beautiful Places</string>
     <string name="hi">Tao </string>
     <string name="search_area_text">Search</string>
@@ -216,6 +215,8 @@ In area of health, he is marvelous, without good health, life is meaningless. He
 
 
 </string>
+    <string name  = "p26">Malik Ado Ibrahim</string>
+
 
     <!--Bloggers names -->
     <string name="b1">Ismail M. Kabir</string>
@@ -248,12 +249,6 @@ Hes the CEO of SavageHQ
 
     <string name="b6">AbdulRahman Muzamil</string>
     <string name="b6_d">AbdulRahman Muzamil he is the CEO of classiqvibes</string>
-
-    <string name="b7">Ismail M. Kabir</string>
-    <string name="b7_d">Ismail M. Kabir</string>
-
-    <string name="b8">Ismail M. Kabir</string>
-    <string name="b8_d">Ismail M. Kabir</string>
 
 
     <!--Photographers names and description -->
