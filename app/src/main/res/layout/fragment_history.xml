@@ -7,7 +7,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".UI.HistoryFragment.HistoryFragment">
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabs"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            app:pressedTranslationZ="0dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:outlineProvider="none"
+            app:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/left_arrow" />
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
