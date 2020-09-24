@@ -11,6 +11,7 @@ import androidx.databinding.ViewDataBinding
  * mubarack.tahirr@gmail.com
  */
 abstract class FullScreenFragment<DB: ViewDataBinding>(@LayoutRes layout:Int) : BaseFragment<DB>(layout) {
+
     override fun onResume() {
         super.onResume()
         activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE or
